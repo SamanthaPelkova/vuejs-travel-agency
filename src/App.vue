@@ -1,5 +1,5 @@
 <template>
-  <img alt="Hotel logo" src="pictures/">
+  <img alt="hilton-logo" src="pictures/hilton-logo.png">
 </template>
 
 <script>
