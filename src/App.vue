@@ -1,14 +1,17 @@
 <template>
   <NavBar class="body"></NavBar>
+  <HomePage></HomePage>
 </template>
 
 <script>
 
 import NavBar from "@/components/NavBar/NavBar.vue";
+import HomePage from "@/components/HomePage/HomePage.vue";
 
 export default {
   name: 'App',
   components: {
+    HomePage,
     NavBar
 
   }
@@ -20,7 +23,9 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   background-color: #5A454B;
 }
-nav-bar{
 
+.body{
+  background-color: black;
 }
+
 </style>
