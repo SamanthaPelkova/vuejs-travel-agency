@@ -1,23 +1,26 @@
 <template>
-  <img alt="hilton-logo" src="pictures/hilton-logo.png">
+  <NavBar class="body"></NavBar>
 </template>
 
 <script>
 
+import NavBar from "@/components/NavBar/NavBar.vue";
+
 export default {
   name: 'App',
   components: {
+    NavBar
 
   }
 }
 </script>
 
 <style>
-#app {
+* {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  margin-top: 60px;
+  background-color: #5A454B;
+}
+nav-bar{
+
 }
 </style>
