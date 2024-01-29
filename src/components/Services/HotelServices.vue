@@ -1,10 +1,11 @@
 <template>
   <div>
-    {{service.id}}
+    <p>{{ services.name }}</p>
   </div>
 </template>
 
 <script>
+
 export default {
   props: {
     services: {
@@ -14,11 +15,14 @@ export default {
   },
   setup(){
 
-}
+    return {
+    }
+  }
 
 }
 </script>
 
 <style scoped>
+
 
 </style>
