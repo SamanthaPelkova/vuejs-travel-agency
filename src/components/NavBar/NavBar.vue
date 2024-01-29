@@ -4,7 +4,7 @@
       <h1 class="logo-text">Hilton Brno</h1>
         <nav id="desktop-nav">
           <ul class="nav-links">
-            <li><a href="#">About</a></li>
+            <li><a href="#" @click="ScrollToHtmlElement">About</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Reviews</a></li>
             <li><a href="#">Products</a></li>
@@ -15,9 +15,15 @@
 </template>
 
 <script>
+import {useScrollTo} from "@/TypeScript/ScrollTo";
+
 export default {
   setup(){
+    const ScrollToHtmlElement = useScrollTo()
 
+    return{
+      ScrollToHtmlElement
+    }
   }
 
 }
