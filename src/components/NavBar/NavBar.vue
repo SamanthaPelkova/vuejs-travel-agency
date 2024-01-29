@@ -4,7 +4,7 @@
       <h1 class="logo-text">Hilton Brno</h1>
         <nav id="desktop-nav">
           <ul class="nav-links">
-            <li><a href="#" @click="ScrollToHtmlElement">About</a></li>
+            <li><a href="#" @click="scrollToElement">About</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Reviews</a></li>
             <li><a href="#">Products</a></li>
@@ -15,18 +15,35 @@
 </template>
 
 <script>
-import {useScrollTo} from "@/TypeScript/ScrollTo";
+
+import {onMounted, ref} from "vue";
 
 export default {
-  setup(){
-    const ScrollToHtmlElement = useScrollTo()
+    setup() {
+      const lastElement = ref(null);
 
-    return{
-      ScrollToHtmlElement
-    }
+      const scrollToElement = () => {
+        if (lastElement.value) {
+          const targetElement = lastElement.value.$el || lastElement.value;
+          targetElement.scrollIntoView({ behavior: "smooth" });
+        }
+      };
+
+      onMounted(() => {
+        const [el] = lastElement.value.$refs.last;
+
+        if (el) {
+          lastElement.value = el;
+        }
+      });
+
+      return {
+        lastElement,
+        scrollToElement,
+      };
+    },
   }
 
-}
 
 </script>
 
