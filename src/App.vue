@@ -1,7 +1,7 @@
 <template>
-  <NavBar class="body" ></NavBar>
+  <img class="background-img-right" src="./pictures/icons/planet-earth.png" alt="">
+  <NavBar class="body"></NavBar>
   <HomePage></HomePage>
-  <HotelReviews :hotel-reviews="hotelReviews"></HotelReviews>
   <HotelServicesSection :services="services"/>
 </template>
 
@@ -9,14 +9,13 @@
 
 import NavBar from "@/components/NavBar/NavBar.vue";
 import HomePage from "@/components/HomePage/HomePage.vue";
-import {ref} from "vue";
+import { ref } from "vue";
 import image1 from "../src/pictures/sauna.jpg"
 import image2 from "../src/pictures/massage.jpg"
 import image3 from "../src/pictures/yoga.jpg"
 import image4 from "../src/pictures/work-out.jpg"
 import image5 from "../src/pictures/swimming-pool.jpg"
 import HotelServicesSection from "@/components/Services/HotelServicesSection.vue";
-import HotelReviews from "@/components/Reviews/HotelReviews.vue";
 import fourHotelStars from "../src/pictures/4-hotel-stars.png"
 import threeHotelStsrs from "../src/pictures/3-hotel-stars.png"
 
@@ -24,7 +23,6 @@ import threeHotelStsrs from "../src/pictures/3-hotel-stars.png"
 export default {
   name: 'App',
   components: {
-    HotelReviews,
     HotelServicesSection,
     HomePage,
     NavBar
@@ -100,11 +98,18 @@ export default {
 <style>
 * {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  background-color: #5A454B;
+  background-color: #3ACBE8;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.body{
-  background-color: black;
+.background-img-right {
+  width: 60%;
+  margin-right: -300px;
+  margin-top: -400px;
+  float: right
 }
+
 
 </style>

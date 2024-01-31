@@ -1,7 +1,8 @@
 <template>
   <div>
-    <img class="cover-image" alt="main-img-hotel-entrance" src="../../pictures/hotel-entrance.jpg"/>
+    <img class="background-img-left" src="../../pictures/icons/earth-on-ground.png" alt="">
     <h3 class="title">{{ title }}</h3>
+    <p class="subtitle">{{ subtitle }}</p>
   </div>
 
 </template>
@@ -11,28 +12,47 @@ import { ref } from "vue";
 export default {
   setup(){
     const title = ref('Welcome to our website!')
+    const subtitle = ref('Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. m tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet,llegg til å be')
+    const offer = ref('Look here to see what we offer')
 
-    return{
-      title
+
+    return {
+      title,
+      subtitle,
+      offer
     }
   }
 }
 </script>
 
 <style>
-.cover-image {
-  z-index: 200;
-  width: 101%;
-  margin-left: -9px;
-  height: 1100px;
+.background-img-left{
+  margin-top: 70px;
+  width: 40%;
+  margin-left: 30px;
 }
 
 .title {
   color: white;
-  z-index: 100;
-  margin-top: -350px;
-  margin-left: 100px;
-  font-size: 50px;
+  margin-top: -630px;
+  position: absolute;
+  background: none;
+  padding: 0px 30px 0px 30px;
+  border-radius: 60px;
+  text-align: center;
+  margin-left: 975px;
+  font-size: 65px;
+}
+
+.subtitle{
+  color: white;
+  width: 35%;
+  text-align: center;
+  margin-left: 1055px;
+  margin-top: -520px;
+  position: absolute;
+  background: none;
+  font-size: 17px;
 }
 
 </style>

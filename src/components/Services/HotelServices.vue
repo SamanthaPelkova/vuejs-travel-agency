@@ -1,6 +1,7 @@
 <template>
-  <div>
+  <div class="notes">
     <p>{{ services.name }}</p>
+    <img :src="services.image" alt="">
   </div>
 </template>
 
@@ -23,6 +24,12 @@ export default {
 </script>
 
 <style scoped>
+*{
+  color: white;
+}
 
+.notes{
+  position: absolute;
+}
 
 </style>

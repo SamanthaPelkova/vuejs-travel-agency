@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="services">
     <h2>{{ servicesTitle }}</h2>
+    fkjfndf
     <HotelServices
-        v-for="service in services"
-        :key="service.id"
         :services="services"
-    />  </div>
+    />
+  </div>
 </template>
 
 <script>
@@ -32,11 +32,9 @@ export default defineComponent({
 </script>
 
 <style scoped>
-*{
-  background-color: black;
-}
-h2{
+.services{
   color: white;
+  z-index: 300;
 }
 
 </style>

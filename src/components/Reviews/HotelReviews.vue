@@ -1,6 +1,6 @@
 <template>
-  <div>
-
+  <div class="description">
+    {{ hotelReviews.description }}
   </div>
 </template>
 
@@ -11,11 +11,23 @@ props: {
     type: Object,
     required: true
   }
-}
+},
+  setup(){
+  // ff
+  }
 
 }
 </script>
 
 <style scoped>
+*{
+  color: white;
+}
+
+.description{
+  color: white;
+  position: absolute;
+  z-index: 300;
+}
 
 </style>
