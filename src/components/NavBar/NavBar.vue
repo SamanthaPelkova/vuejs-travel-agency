@@ -6,8 +6,8 @@
           <ul class="nav-links">
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>
-            <li><a href="#">Reviews</a></li>
-            <li><a href="#">Products</a></li>
+            <li><a href="#">Notes</a></li>
+            <li><a href="#">Search</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
         </nav>
@@ -56,6 +56,7 @@ nav .nav-links{
   padding-right: 50px;
   background-color: #33c1de;
   border-radius: 40px;
+  box-shadow: 8px 8px 30px black;
 }
 
 nav ul li{

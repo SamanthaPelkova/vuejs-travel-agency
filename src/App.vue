@@ -2,20 +2,20 @@
   <img class="background-img-right" src="./pictures/icons/planet-earth.png" alt="">
   <NavBar class="body"></NavBar>
   <HomePage></HomePage>
-  <HotelServicesSection :services="services"/>
+  <TravelServicesSection :services="services"/>
 </template>
 
 <script>
 
-import NavBar from "@/components/NavBar/NavBar.vue";
-import HomePage from "@/components/HomePage/HomePage.vue";
-import { ref } from "vue";
+import NavBar from "@/components/NavBar/NavBar.vue"
+import HomePage from "@/components/HomePage/HomePage.vue"
+import { ref } from "vue"
 import image1 from "../src/pictures/sauna.jpg"
 import image2 from "../src/pictures/massage.jpg"
 import image3 from "../src/pictures/yoga.jpg"
 import image4 from "../src/pictures/work-out.jpg"
 import image5 from "../src/pictures/swimming-pool.jpg"
-import HotelServicesSection from "@/components/Services/HotelServicesSection.vue";
+import TravelServicesSection from "@/components/Services/TravelServicesSection.vue"
 import fourHotelStars from "../src/pictures/4-hotel-stars.png"
 import threeHotelStsrs from "../src/pictures/3-hotel-stars.png"
 
@@ -23,7 +23,7 @@ import threeHotelStsrs from "../src/pictures/3-hotel-stars.png"
 export default {
   name: 'App',
   components: {
-    HotelServicesSection,
+    TravelServicesSection,
     HomePage,
     NavBar
   },
