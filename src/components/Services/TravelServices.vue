@@ -1,7 +1,8 @@
 <template>
   <div class="notes">
-    <p>{{ services.name }}</p>
-    <img :src="services.image" alt="">
+    <h3>{{ services.title }}</h3>
+    <p>{{ services.description }}</p>
+
   </div>
 </template>
 

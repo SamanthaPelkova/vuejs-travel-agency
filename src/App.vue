@@ -2,7 +2,12 @@
   <img class="background-img-right" src="./pictures/icons/planet-earth.png" alt="">
   <NavBar class="body"></NavBar>
   <HomePage></HomePage>
-  <TravelServicesSection :services="services"/>
+  <h2 class="offer">{{ offerTitle }}</h2>
+  <TravelServices
+      v-for="service in services"
+      :key="service.id"
+      :services="service"
+  />
 </template>
 
 <script>
@@ -15,15 +20,15 @@ import image2 from "../src/pictures/massage.jpg"
 import image3 from "../src/pictures/yoga.jpg"
 import image4 from "../src/pictures/work-out.jpg"
 import image5 from "../src/pictures/swimming-pool.jpg"
-import TravelServicesSection from "@/components/Services/TravelServicesSection.vue"
 import fourHotelStars from "../src/pictures/4-hotel-stars.png"
 import threeHotelStsrs from "../src/pictures/3-hotel-stars.png"
+import TravelServices from "@/components/Services/TravelServices.vue";
 
 
 export default {
   name: 'App',
   components: {
-    TravelServicesSection,
+    TravelServices,
     HomePage,
     NavBar
   },
@@ -87,9 +92,13 @@ export default {
         image: threeHotelStsrs
       }
     ])
+
+    const offerTitle = ref('Our Services')
+
     return{
       services,
-      hotelReviews
+      hotelReviews,
+      offerTitle
     }
   }
 }
@@ -109,6 +118,15 @@ export default {
   margin-right: -300px;
   margin-top: -400px;
   float: right
+}
+
+.offer {
+  background-color: white;
+  padding: 50px;
+  text-align: center;
+  font-size: 60px;
+  color: #3ACBE8;
+  border-radius: 70px 0px 70px 0px;
 }
 
 
