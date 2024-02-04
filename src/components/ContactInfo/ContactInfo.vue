@@ -8,14 +8,11 @@
 </template>
 
 <script>
-import {inject} from "vue";
 
 export default {
   setup (){
-    const contactInfo = inject('/contactInfo')
 
     return{
-      contacts: contactInfo
     }
   }
 }

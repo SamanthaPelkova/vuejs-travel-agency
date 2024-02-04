@@ -5,10 +5,10 @@
         <nav id="desktop-nav">
           <ul class="nav-links">
             <li>
-              <router-link to="/">About</router-link>
+              <router-link to="/aboutUs">About us</router-link>
             </li>
             <li>
-              <router-link to="/services">Services</router-link>
+              <router-link to="/travelServices">Services</router-link>
             </li>
             <li>
               <router-link to="/notesWishlist">Notes</router-link>

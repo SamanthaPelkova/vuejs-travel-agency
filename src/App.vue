@@ -1,76 +1,33 @@
 <template>
   <img class="background-img-right" src="./pictures/icons/planet-earth.png" alt="">
   <NavBar class="body"></NavBar>
-  <HomePage></HomePage>
-  <h2 class="offer">{{ offerTitle }}</h2>
-  <TravelServices
-      v-for="service in services"
-      :key="service.id"
-      :services="service"
-      class="travel-services"
-  />
+  <div class="content">
+    <img class="background-img-left" src="./pictures/icons/earth-on-ground.png" alt="">
+    <h3 class="title">{{ title }}</h3>
+    <p class="subtitle">{{ subtitle }}</p>
+    <h2 class="offer-title">{{ offer }}</h2>
+    <img class="arrow-down" src="./pictures/icons/white-arrow.png" alt="">
+  </div>
+  <router-view></router-view>
 </template>
 
 <script>
 
 import NavBar from "@/components/NavBar/NavBar.vue"
-import HomePage from "@/components/HomePage/HomePage.vue"
 import { ref } from "vue"
-import image1 from "../src/pictures/sauna.jpg"
-import image2 from "../src/pictures/massage.jpg"
-import image3 from "../src/pictures/yoga.jpg"
-import image4 from "../src/pictures/work-out.jpg"
-import image5 from "../src/pictures/swimming-pool.jpg"
 import fourHotelStars from "../src/pictures/4-hotel-stars.png"
 import threeHotelStsrs from "../src/pictures/3-hotel-stars.png"
-import TravelServices from "@/components/Services/TravelServices.vue";
 
 
 export default {
   name: 'App',
   components: {
-    TravelServices,
-    HomePage,
     NavBar
   },
   setup(){
-    const services = ref([
-      {
-        id: 1,
-        title: 'Sauna',
-        description: 'fioejfojfj eojf ioejfij ief jio jj ifji iofj o ifjij iojei jjioefj ijeij ioj eiji ju un nijeju  on iji',
-        label: 'Nedávno přidané',
-        image: image1
-      },
-      {
-        id: 2,
-        title: 'Masáže',
-        description: 'fioejfojfj eojf ioejfij ief jio jj ifji iofj o ifjij iojei jjioefj ijeij ioj eiji ju un nijeju  on iji',
-        label: 'Nedávno přidané',
-        image: image2
-      },
-      {
-        id: 3,
-        title: 'Yoga',
-        description: 'fioejfojfj eojf ioejfij ief jio jj ifji iofj o ifjij iojei jjioefj ijeij ioj eiji ju un nijeju  on iji',
-        label: 'Nedávno přidané',
-        image: image3
-      },
-      {
-        id: 4,
-        title: 'Cvičení',
-        description: 'fioejfojfj eojf ioejfij ief jio jj ifji iofj o ifjij iojei jjioefj ijeij ioj eiji ju un nijeju  on iji',
-        label: 'Nedávno přidané',
-        image: image4
-      },
-      {
-        id: 5,
-        title: 'Plavecký bazén',
-        description: 'fioejfojfj eojf ioejfij ief jio jj ifji iofj o ifjij iojei jjioefj ijeij ioj eiji ju un nijeju  on iji',
-        label: 'Výhodné pro Vás',
-        image: image5
-      }
-    ])
+    const title = ref('Welcome to our website!')
+    const subtitle = ref('Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. m tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet,llegg til å be')
+    const offer = ref('Look below to see what we offer')
 
     const travelReviews = ref([
       {
@@ -99,12 +56,12 @@ export default {
       }
     ])
 
-    const offerTitle = ref('Our Services')
 
     return{
-      services,
       travelReviews,
-      offerTitle
+      title,
+      offer,
+      subtitle
     }
   }
 }
@@ -125,21 +82,55 @@ export default {
   margin-top: -400px;
   float: right
 }
-
-.offer {
-  background-color: white;
-  padding: 50px;
-  text-align: center;
-  font-size: 60px;
-  color: #3ACBE8;
-  border-radius: 70px 0px 70px 0px;
+.background-img-left {
+  margin-top: 70px;
+  width: 40%;
+  margin-left: 30px;
 }
-.travel-services{
-  width: 60%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 40px;
+
+.arrow-down {
+  background: none;
+  width: 10%;
+  margin-top: 620px;
+  transform: rotate(-0.13turn);
+  margin-left: 200px;
+  position: absolute;
+}
+
+.title {
+  color: white;
+  margin-top: -630px;
+  position: absolute;
+  background: none;
+  padding: 0px 30px 0px 30px;
+  border-radius: 60px;
+  text-align: center;
+  margin-left: 975px;
+  font-size: 65px;
+}
+
+.subtitle {
+  color: white;
+  width: 35%;
+  text-align: center;
+  margin-left: 1055px;
+  margin-top: -520px;
+  position: absolute;
+  background: none;
+  font-size: 17px;
+}
+
+.offer-title {
+  color: white;
+  margin-top: -220px;
+  position: absolute;
+  background: none;
+  padding: 0px 30px 0px 30px;
+  border-radius: 60px;
+  text-align: center;
+  margin-left: 1105px;
+  font-size: 45px;
+  transform: rotate(-0.960turn);
 }
 
 
