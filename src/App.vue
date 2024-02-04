@@ -7,6 +7,7 @@
       v-for="service in services"
       :key="service.id"
       :services="service"
+      class="travel-services"
   />
 </template>
 
@@ -38,35 +39,40 @@ export default {
         id: 1,
         title: 'Sauna',
         description: 'fioejfojfj eojf ioejfij ief jio jj ifji iofj o ifjij iojei jjioefj ijeij ioj eiji ju un nijeju  on iji',
+        label: 'Nedávno přidané',
         image: image1
       },
       {
         id: 2,
         title: 'Masáže',
         description: 'fioejfojfj eojf ioejfij ief jio jj ifji iofj o ifjij iojei jjioefj ijeij ioj eiji ju un nijeju  on iji',
+        label: 'Nedávno přidané',
         image: image2
       },
       {
         id: 3,
         title: 'Yoga',
         description: 'fioejfojfj eojf ioejfij ief jio jj ifji iofj o ifjij iojei jjioefj ijeij ioj eiji ju un nijeju  on iji',
+        label: 'Nedávno přidané',
         image: image3
       },
       {
         id: 4,
         title: 'Cvičení',
         description: 'fioejfojfj eojf ioejfij ief jio jj ifji iofj o ifjij iojei jjioefj ijeij ioj eiji ju un nijeju  on iji',
+        label: 'Nedávno přidané',
         image: image4
       },
       {
         id: 5,
         title: 'Plavecký bazén',
         description: 'fioejfojfj eojf ioejfij ief jio jj ifji iofj o ifjij iojei jjioefj ijeij ioj eiji ju un nijeju  on iji',
+        label: 'Výhodné pro Vás',
         image: image5
       }
     ])
 
-    const hotelReviews = ref([
+    const travelReviews = ref([
       {
         id: 1,
         name: 'Jana Nováková',
@@ -97,7 +103,7 @@ export default {
 
     return{
       services,
-      hotelReviews,
+      travelReviews,
       offerTitle
     }
   }
@@ -127,6 +133,13 @@ export default {
   font-size: 60px;
   color: #3ACBE8;
   border-radius: 70px 0px 70px 0px;
+}
+.travel-services{
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 40px;
 }
 
 

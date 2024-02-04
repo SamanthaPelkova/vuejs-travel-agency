@@ -4,11 +4,21 @@
       <h1 class="logo-text">Travel The World</h1>
         <nav id="desktop-nav">
           <ul class="nav-links">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Notes</a></li>
-            <li><a href="#">Search</a></li>
-            <li><a href="#">Contact</a></li>
+            <li>
+              <router-link to="/">About</router-link>
+            </li>
+            <li>
+              <router-link to="/services">Services</router-link>
+            </li>
+            <li>
+              <router-link to="/notesWishlist">Notes</router-link>
+            </li>
+            <li>
+              <router-link to="travelProducts">Products</router-link>
+            </li>
+            <li>
+              <router-link to="/contact">Contact</router-link>
+            </li>
           </ul>
         </nav>
     </header>
