@@ -1,9 +1,10 @@
 <template>
   <div class="content">
     <h2 class="about-us-title"> {{ aboutUsTitle }} </h2>
+    <button @click="scrollToAboutUs('.jq--about-us')" class="jq--scroll-about-us btn-read-more">Read more</button>
     <h2 class="offer-subtitle"> {{aboutUsSubtitle}} </h2>
     <div class="travel-offers" v-for="offer in offers" :key="offer.id">
-      <h3 class="offers-title">{{ offer.title }}</h3>
+      <h3 class="offers-title jq--about-us">{{ offer.title }}</h3>
       <img :src="offer.image" class="offer-image" alt="">
       <p class="offer-price">{{ offer.price }}</p>
       <p class="offer-description">{{ offer.description }}</p>
@@ -12,16 +13,22 @@
 </template>
 <script>
 
-import {ref} from "vue";
+import {onMounted, ref} from "vue";
 import image1 from '../../pictures/icons/parking-spot.png'
 import image2 from '../../pictures/icons/plane-around-earth.png'
 import image3 from '../../pictures/icons/travelling.png'
 import image4 from '../../pictures/icons/animal-plane.png'
+import { useScroll } from "@/script";
 
 export default {
   setup(){
     const aboutUsTitle = ref('Read here about us :)')
     const aboutUsSubtitle = ref('Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. m tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet,llegg til å be. Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. m tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet,llegg til å be.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. m tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet,llegg til å be')
+    const { scrollToAboutUs } = useScroll()
+
+    onMounted(() => {
+
+    })
 
     const offers = ref([
       {
@@ -57,7 +64,8 @@ export default {
     return {
       aboutUsTitle,
       aboutUsSubtitle,
-      offers
+      offers,
+      scrollToAboutUs
     }
   }
 }
@@ -124,6 +132,18 @@ export default {
   color: white;
   margin: 50px;
   text-align: center;
+}
+
+.btn-read-more {
+  background-color: #3ACBE8;
+  margin-left: 900px;
+  border-radius: 20px;
+  color: white;
+  font-size: 30px;
+  padding: 10px;
+  margin-top: -40px;
+  cursor: pointer;
+
 }
 
 
