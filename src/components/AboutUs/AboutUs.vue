@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <h2 class="about-us-title"> {{ aboutUsTitle }} </h2>
-    <button @click="scrollTo('.jq--about-us')" class="jq--scroll-about-us btn-read-more">Show more</button>
+    <button @click="scrollTo('.jq--about-us')" class="btn-read-more">Show more</button>
     <h2 class="offer-subtitle"> {{aboutUsSubtitle}} </h2>
     <div class="travel-offers" v-for="offer in offers" :key="offer.id">
       <h3 class="offers-title jq--about-us">{{ offer.title }}</h3>

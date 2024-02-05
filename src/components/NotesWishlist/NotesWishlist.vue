@@ -21,8 +21,9 @@
         <button @click="addNotesItem" type="submit" class="button-submit">{{ submit }}</button>
     </div>
     <div class="entered-notes">
-      <ul>
-        <li v-for="note in notesItems" :key="note">
+      <h1 class="your-notes-title">{{ yourNotes }}</h1>
+      <ul class="note-items">
+        <li v-for="note in notesItems" :key="note" class="note-item">
           {{ note }}
         </li>
       </ul>
@@ -43,8 +44,9 @@ export default {
     const whatToSee = ref('Places')
     const numberOfPeople = ref('People')
     const submit = ref('Submit')
-    const firstName = ref('Jméno')
-    const lastName = ref('Příjmení')
+    const firstName = ref('FirstName')
+    const lastName = ref('LastName')
+    const yourNotes = ref('Your Notes')
     const email = ref('*Email')
 
     const notesItems = ref([])
@@ -85,6 +87,7 @@ export default {
       placeToTravel,
       addNotesItem,
       notesItems,
+      yourNotes,
       submit
     }
   }
@@ -170,6 +173,32 @@ export default {
 
 .input-places {
   height: 100px;
+}
+
+.your-notes-title {
+  margin-top: -820px;
+  padding: 10px;
+  background-color: #227c8d;
+  border-radius: 40px;
+  text-align: center;
+  color: white;
+}
+
+.entered-notes {
+  margin-left: 1300px;
+  margin-right: 250px;
+  background-color: white;
+}
+
+.note-items {
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-top: 10px;
+  list-style-type: none;
+}
+
+.note-item {
+  margin-top: 20px;
 }
 
 </style>
