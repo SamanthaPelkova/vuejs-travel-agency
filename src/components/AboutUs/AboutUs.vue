@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <h2 class="about-us-title"> {{ aboutUsTitle }} </h2>
-    <button @click="scrollToAboutUs('.jq--about-us')" class="jq--scroll-about-us btn-read-more">Read more</button>
+    <button @click="scrollTo('.jq--about-us')" class="jq--scroll-about-us btn-read-more">Show more</button>
     <h2 class="offer-subtitle"> {{aboutUsSubtitle}} </h2>
     <div class="travel-offers" v-for="offer in offers" :key="offer.id">
       <h3 class="offers-title jq--about-us">{{ offer.title }}</h3>
@@ -24,7 +24,7 @@ export default {
   setup(){
     const aboutUsTitle = ref('Read here about us :)')
     const aboutUsSubtitle = ref('Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. m tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet,llegg til å be. Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. m tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet,llegg til å be.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. m tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet,llegg til å be')
-    const { scrollToAboutUs } = useScroll()
+    const { scrollTo } = useScroll()
 
     onMounted(() => {
 
@@ -65,7 +65,7 @@ export default {
       aboutUsTitle,
       aboutUsSubtitle,
       offers,
-      scrollToAboutUs
+      scrollTo
     }
   }
 }
