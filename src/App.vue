@@ -8,6 +8,7 @@
     <h2 class="offer-title">{{ offer }}</h2>
     <img class="arrow-down" src="./pictures/icons/white-arrow.png" alt="">
   </div>
+
   <router-view></router-view>
 </template>
 
