@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="notes-class">
     <h2 class="notes-title">{{ notesTitle }}</h2>
     <h4 class="notes-subtitle">{{ notesSubtitle }}</h4>
     <div class="travel-notes">

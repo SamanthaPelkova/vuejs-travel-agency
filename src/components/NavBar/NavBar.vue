@@ -4,13 +4,13 @@
       <h1 class="logo-text">Travel The World</h1>
         <nav id="desktop-nav">
           <ul class="nav-links">
-            <li>
+            <li @click="scrollTo('.about-us-title')">
               <router-link to="/aboutUs">About us</router-link>
             </li>
-            <li>
+            <li @click="scrollTo('.offer')">
               <router-link to="/travelServices">Services</router-link>
             </li>
-            <li>
+            <li @click="scrollTo('.notes-class')">
               <router-link to="/notesWishlist">Notes</router-link>
             </li>
             <li>
@@ -26,9 +26,15 @@
 
 <script>
 
+import {useScroll} from "@/script";
+
 export default {
     setup() {
+      const { scrollTo } = useScroll()
 
+      return {
+        scrollTo
+      }
     },
   }
 

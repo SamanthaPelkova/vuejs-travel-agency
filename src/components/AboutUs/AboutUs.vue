@@ -1,4 +1,5 @@
 <template>
+    <button class="scroll-to-top-arrow" @click="scrollTo('.logo-text')"><img src="../../pictures/icons/white-arrow.png" alt=""></button>
   <div class="content">
     <h2 class="about-us-title"> {{ aboutUsTitle }} </h2>
     <button @click="scrollTo('.jq--about-us')" class="btn-read-more">Show more</button>
@@ -11,6 +12,7 @@
     </div>
   </div>
 </template>
+
 <script>
 
 import {onMounted, ref} from "vue";
@@ -143,8 +145,23 @@ export default {
   padding: 10px;
   margin-top: -40px;
   cursor: pointer;
-
 }
 
+.scroll-to-top-arrow {
+  background: none;
+  border: none;
+}
+
+.scroll-to-top-arrow img{
+  position: absolute;
+  background: #227c8d;
+  width: 5%;
+  border-radius: 70px;
+  box-shadow: 2px 2px 40px #172c64;
+  cursor: pointer;
+  margin-top: 40px;
+  transform: rotate(-0.75turn);
+  margin-left: 1750px;
+}
 
 </style>

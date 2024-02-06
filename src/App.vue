@@ -1,14 +1,7 @@
 <template>
   <img class="background-img-right" src="./pictures/icons/planet-earth.png" alt="">
   <NavBar class="body"></NavBar>
-  <div class="content">
-    <img class="background-img-left" src="./pictures/icons/earth-on-ground.png" alt="">
-    <h3 class="title">{{ title }}</h3>
-    <p class="subtitle">{{ subtitle }}</p>
-    <h2 class="offer-title">{{ offer }}</h2>
-    <img class="arrow-down" src="./pictures/icons/white-arrow.png" alt="">
-  </div>
-
+  <HomePage></HomePage>
   <router-view></router-view>
 </template>
 
@@ -18,17 +11,17 @@ import NavBar from "@/components/NavBar/NavBar.vue"
 import { ref } from "vue"
 import fourHotelStars from "../src/pictures/4-hotel-stars.png"
 import threeHotelStsrs from "../src/pictures/3-hotel-stars.png"
+import HomePage from "@/components/HomePage/HomePage.vue";
 
 
 export default {
   name: 'App',
   components: {
+    HomePage,
     NavBar
   },
   setup(){
-    const title = ref('Welcome to our website!')
-    const subtitle = ref('Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. m tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet,llegg til å be')
-    const offer = ref('Look below to see what we offer')
+
 
     const travelReviews = ref([
       {
@@ -59,10 +52,7 @@ export default {
 
 
     return{
-      travelReviews,
-      title,
-      offer,
-      subtitle
+      travelReviews
     }
   }
 }
