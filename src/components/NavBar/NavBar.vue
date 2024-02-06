@@ -7,7 +7,7 @@
             <li @click="scrollTo('.about-us-title')">
               <router-link to="/aboutUs">About us</router-link>
             </li>
-            <li @click="scrollTo('.offer')">
+            <li>
               <router-link to="/travelServices">Services</router-link>
             </li>
             <li @click="scrollTo('.notes-class')">

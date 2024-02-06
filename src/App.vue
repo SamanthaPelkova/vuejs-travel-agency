@@ -1,7 +1,6 @@
 <template>
   <img class="background-img-right" src="./pictures/icons/planet-earth.png" alt="">
   <NavBar class="body"></NavBar>
-  <HomePage></HomePage>
   <router-view></router-view>
 </template>
 
@@ -11,13 +10,10 @@ import NavBar from "@/components/NavBar/NavBar.vue"
 import { ref } from "vue"
 import fourHotelStars from "../src/pictures/4-hotel-stars.png"
 import threeHotelStsrs from "../src/pictures/3-hotel-stars.png"
-import HomePage from "@/components/HomePage/HomePage.vue";
-
 
 export default {
   name: 'App',
   components: {
-    HomePage,
     NavBar
   },
   setup(){
@@ -71,7 +67,8 @@ export default {
   width: 60%;
   margin-right: -300px;
   margin-top: -400px;
-  float: right
+  float: right;
+  background: none;
 }
 .background-img-left {
   margin-top: 70px;

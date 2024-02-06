@@ -1,5 +1,6 @@
 <template>
   <h2 class="offer">{{ offerTitle }}</h2>
+  <p class="offer-subtitle">{{ offerSubtitle }}</p>
   <div class="travel-services" v-for="service in services" :key="service.id">
     <p class="service-label">{{ service.label }}</p>
     <h3 class="service-title">{{ service.title }}</h3>
@@ -61,11 +62,13 @@ export default {
     ])
 
     const offerTitle = ref('Our Services')
+    const offerSubtitle = ref('Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. m tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet,llegg til å be. Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. m tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet,llegg til å be.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. m tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet,llegg til å be')
 
 
     return {
       services,
-      offerTitle
+      offerTitle,
+      offerSubtitle
     }
   }
 
@@ -123,11 +126,22 @@ export default {
 .offer {
   background-color: white;
   padding: 50px;
+  width: 55%;
   text-align: center;
+  margin-left: 10px;
+  margin-top: 90px;
   font-size: 60px;
   color: #3ACBE8;
-  border-radius: 70px 0px 70px 0px;
+  border-radius: 70px 5px 70px 5px;
 }
+
+.offer-subtitle {
+  font-size: 20px;
+
+  margin-left: 15px;
+  margin-top: 20px;
+}
+
 .travel-services{
   width: 60%;
   display: flex;
