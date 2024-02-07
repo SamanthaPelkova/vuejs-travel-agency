@@ -9,9 +9,10 @@
         <img :src="product.image" class="product-image" alt="">
         <p class="product-description">{{ product.description }}</p>
         <div class="product-quantity">
-          <button @click="decreaseQuantity" class="button-decrease">-</button>
+          <button @click="decreaseQuantity" class="button-decrease-increase">-</button>
           <input v-model="quantity" min="1" class="product-input-quantity">
-          <button @click="increaseQuantity" class="button-increase">+</button>
+          <button @click="increaseQuantity" class="button-decrease-increase">+</button>
+          <button class="add-to-basket">{{ addToBasketTitle }}</button>
         </div>
       </div>
     </div>
@@ -42,6 +43,7 @@ export default {
     }
 
     const travelProductsTitle = ref('Products we offer')
+    const addToBasketTitle = ref('Add to basket')
     const travelProductsSubtitle = ref('Lorem Ipsum tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet,llegg til å be.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. m tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet,llegg til å be')
 
 
@@ -52,6 +54,7 @@ export default {
       decreaseQuantity,
       increaseQuantity,
       travelProductsTitle,
+      addToBasketTitle,
       travelProductsSubtitle
     }
   }
@@ -101,6 +104,8 @@ export default {
   padding: 30px;
   border-radius: 90px;
   background-color: white;
+  box-shadow: 10px 10px 50px black;
+
 }
 
 .product-image {
@@ -131,7 +136,43 @@ export default {
 
 .product-description {
   background-color: white;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
 
+.product-quantity {
+  background-color: white;
+  width: 100%;
+}
+
+.button-decrease-increase {
+  padding: 20px;
+  font-size: 20px;
+  border: 2px solid #227c8d;
+  border-radius: 10px;
+  background-color: #2ea5bb;
+  margin: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.product-input-quantity {
+  padding: 20px;
+  width: 20%;
+  font-size: 20px;
+  border: 2px solid #227c8d;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.add-to-basket {
+  width: 30%;
+  padding: 20px;
+  font-size: 20px;
+  border: 2px solid #227c8d;
+  border-radius: 30px;
+  margin-left: 40px;
+  cursor: pointer;
 }
 
 
