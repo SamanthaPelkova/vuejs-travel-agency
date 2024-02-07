@@ -4,8 +4,12 @@
     <h4 class="notes-subtitle">{{ notesSubtitle }}</h4>
     <div class="travel-notes">
       <h2 class="travel-title-note">{{ travelNotesTitle }}</h2>
+      <div class="example">
+        <h3 class="title-h3">{{ exampleTitle }}</h3>
+        <p class="subtitle-h3">{{ exampleSubtitle }}</p>
+      </div>
       <div class="add-notes">
-        <h3>{{ placeToTravel }}</h3>
+        <h3 class="state">{{ placeToTravel }}</h3>
         <input type="text" placeholder="Paris..." v-model="enteredTravelTitle">
         <h3>{{ whatToSee }}</h3>
         <input type="text" placeholder="See the Eiffel Tower..." class="input-places" v-model="enteredTravelGoals">
@@ -38,6 +42,8 @@ export default {
   name: 'NotesWishlist',
   setup () {
     const notesTitle = ref('Here is your wishlist')
+    const exampleTitle = ref('Example')
+    const exampleSubtitle = ref('Paris, see the EifferTower, 2 people, june@gmail.com')
     const notesSubtitle = ref('or your notes if you prefer ;)')
     const travelNotesTitle = ref('Here you can add a note')
     const placeToTravel = ref('State')
@@ -84,6 +90,8 @@ export default {
       whatToSee,
       numberOfPeople,
       enteredTravelPeople,
+      exampleTitle,
+      exampleSubtitle,
       placeToTravel,
       addNotesItem,
       notesItems,
@@ -102,8 +110,10 @@ export default {
   text-align: center;
   font-size: 60px;
   color: #3ACBE8;
-  border-radius: 70px 0 70px 0;
+  border-radius: 70px;
+  margin-top: 30px;
 }
+
 
 .notes-subtitle {
   color: rgba(58, 160, 232, 0.91);
@@ -122,7 +132,7 @@ export default {
 }
 
 .travel-title-note {
-  margin-left: 200px;
+  margin-left: 100px;
   color: #227c8d;
   padding: 20px;
   margin-top: 70px;
@@ -133,7 +143,8 @@ export default {
 
 .add-notes {
   background-color: white;
-  margin-left: 530px;
+  margin-top: 150px;
+  margin-left: 450px;
 }
 
 .add-notes h3 {
@@ -145,7 +156,7 @@ export default {
   margin-left: -150px;
   border-radius: 60px;
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .add-notes input {
@@ -177,7 +188,7 @@ export default {
 
 .your-notes-title {
   margin-top: -820px;
-  padding: 10px;
+  padding-bottom: 23px;
   background-color: #227c8d;
   border-radius: 40px;
   text-align: center;
@@ -199,6 +210,22 @@ export default {
 
 .note-item {
   margin-top: 20px;
+}
+
+.example h3{
+  background-color: white;
+  padding-left: 90px;
+  margin-top: 40px;
+  font-size: 22px;
+  width: 100%;
+}
+
+
+
+.example p {
+  background-color: white;
+  padding-left: 150px;
+  width: 100%;
 }
 
 </style>

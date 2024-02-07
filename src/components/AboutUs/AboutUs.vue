@@ -2,8 +2,8 @@
     <button class="scroll-to-top-arrow" @click="scrollTo('.logo-text')"><img src="../../pictures/icons/white-arrow.png" alt=""></button>
   <div class="content">
     <h2 class="about-us-title"> {{ aboutUsTitle }} </h2>
-    <button @click="scrollTo('.jq--about-us')" class="btn-read-more">Show more</button>
     <h2 class="offer-subtitle"> {{aboutUsSubtitle}} </h2>
+    <button @click="scrollTo('.jq--about-us')" class="btn-read-more">Show more</button>
     <div class="travel-offers" v-for="offer in offers" :key="offer.id">
       <h3 class="offers-title jq--about-us">{{ offer.title }}</h3>
       <img :src="offer.image" class="offer-image" alt="">
@@ -83,10 +83,13 @@ export default {
 .about-us-title {
   background-color: white;
   padding: 50px;
+  width: 55%;
   text-align: center;
+  margin-left: 10px;
+  margin-top: 90px;
   font-size: 60px;
   color: #3ACBE8;
-  border-radius: 70px 0px 70px 0px;
+  border-radius: 70px 5px 70px 5px;
 }
 
 .offer-image{
@@ -132,18 +135,22 @@ export default {
 
 .offer-subtitle {
   color: white;
-  margin: 50px;
+  margin-top: 40px;
+  margin-left: 20px;
+  width: 55%;
   text-align: center;
 }
 
 .btn-read-more {
-  background-color: #3ACBE8;
-  margin-left: 900px;
+  background-color: #227c8d;
+  border: 2px solid white;
   border-radius: 20px;
+  width: 30%;
+  margin-left: 280px;
+  margin-top: 20px;
   color: white;
   font-size: 30px;
   padding: 10px;
-  margin-top: -40px;
   cursor: pointer;
 }
 
