@@ -169,10 +169,18 @@ export default {
   width: 30%;
   padding: 20px;
   font-size: 20px;
+  color: white;
   border: 2px solid #227c8d;
   border-radius: 30px;
   margin-left: 40px;
   cursor: pointer;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.add-to-basket:hover {
+  background-color: white;
+  font-weight: bold;
+  color: #15515d;
 }
 
 
