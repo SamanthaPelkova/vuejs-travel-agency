@@ -1,6 +1,6 @@
 <template>
     <header>
-      <img class="logo" alt="hilton-logo" src="../../pictures/icons/logo.png"/>
+      <router-link class="home-page-redirect" to="/" ><img class="logo" alt="" src="../../pictures/icons/logo.png"></router-link>
       <h1 class="logo-text">Travel The World</h1>
         <nav id="desktop-nav">
           <ul class="nav-links">

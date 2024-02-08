@@ -2,6 +2,9 @@
   <img class="background-img-right" src="./pictures/planet.png" alt="">
   <NavBar class="body"></NavBar>
   <router-view></router-view>
+  <footer>
+    fofn
+  </footer>
 </template>
 
 <script>
@@ -62,6 +65,8 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
+
+
 
 .background-img-right {
   width: 60%;
