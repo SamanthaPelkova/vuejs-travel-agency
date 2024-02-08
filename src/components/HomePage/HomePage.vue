@@ -6,6 +6,9 @@
       <p class="subtitle">{{ subtitle }}</p>
       <FreeTickets></FreeTickets>
     </div>
+    <footer>
+      © 2024 TravelAgency. All rights reserved.
+    </footer>
 
   </div>
 </template>

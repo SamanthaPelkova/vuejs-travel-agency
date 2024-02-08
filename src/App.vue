@@ -2,9 +2,7 @@
   <img class="background-img-right" src="./pictures/planet.png" alt="">
   <NavBar class="body"></NavBar>
   <router-view></router-view>
-  <footer>
-    © 2024 TravelAgency. All rights reserved.
-  </footer>
+
 </template>
 
 <script>
@@ -99,13 +97,13 @@ footer {
 
 .title {
   color: white;
-  margin-top: -630px;
+  margin-top: -800px;
   position: absolute;
   background: none;
   padding: 0px 30px 0px 30px;
   border-radius: 60px;
   text-align: center;
-  margin-left: 975px;
+  margin-left: 985px;
   font-size: 65px;
 }
 
@@ -113,8 +111,8 @@ footer {
   color: white;
   width: 35%;
   text-align: center;
-  margin-left: 1055px;
-  margin-top: -520px;
+  margin-left: 1085px;
+  margin-top: -710px;
   position: absolute;
   background: none;
   font-size: 17px;

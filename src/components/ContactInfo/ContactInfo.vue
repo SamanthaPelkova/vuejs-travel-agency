@@ -5,6 +5,9 @@
       <p class="subtitle-contact">{{ contactInfoSubtitle }}</p>
     </div>
   </section>
+  <footer>
+    © 2024 TravelAgency. All rights reserved.
+  </footer>
 </template>
 
 <script>

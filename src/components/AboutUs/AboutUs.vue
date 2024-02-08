@@ -11,6 +11,9 @@
       <p class="offer-description">{{ offer.description }}</p>
     </div>
   </div>
+  <footer>
+    © 2024 TravelAgency. All rights reserved.
+  </footer>
 </template>
 
 <script>

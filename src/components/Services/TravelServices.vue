@@ -7,6 +7,9 @@
     <img :src="service.image" class="service-image" alt="">
     <p class="service-description">{{ service.description }}</p>
   </div>
+  <footer>
+    © 2024 TravelAgency. All rights reserved.
+  </footer>
 </template>
 
 <script>
