@@ -137,7 +137,6 @@ export default {
 
 .offer-subtitle {
   font-size: 20px;
-
   margin-left: 15px;
   margin-top: 20px;
 }

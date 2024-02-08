@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="content">
-      <img class="background-img-left" src="../../pictures/icons/earth-on-ground.png" alt="">
+      <img class="background-img-left" src="../../pictures/icons/airplane.png" alt="">
       <h3 class="title">{{ title }}</h3>
       <p class="subtitle">{{ subtitle }}</p>
       <h2 class="offer-title">{{ offer }}</h2>

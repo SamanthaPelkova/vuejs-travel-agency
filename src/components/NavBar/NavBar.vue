@@ -13,11 +13,11 @@
             <li @click="scrollTo('.notes-class')">
               <router-link to="/notesWishlist">Notes</router-link>
             </li>
-            <li>
+            <li @click="scrollTo('.content')">
               <router-link to="travelProducts">Products</router-link>
             </li>
-            <li>
-              <router-link to="/contact">Contact</router-link>
+            <li @click="scrollTo('.contact-info')">
+              <router-link to="/contactInfo">Contact</router-link>
             </li>
           </ul>
         </nav>

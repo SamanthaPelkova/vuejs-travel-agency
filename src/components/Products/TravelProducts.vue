@@ -160,6 +160,7 @@ export default {
   width: 20%;
   font-size: 20px;
   border: 2px solid #227c8d;
+  background-color: white;
   border-radius: 10px;
   text-align: center;
   font-weight: bold;

@@ -6,6 +6,7 @@ import NotesWishlist from "@/components/NotesWishlist/NotesWishlist.vue";
 import AboutUs from "@/components/AboutUs/AboutUs.vue";
 import TravelProducts from "@/components/Products/TravelProducts.vue";
 import HomePage from "@/components/HomePage/HomePage.vue";
+import ContactInfo from "@/components/ContactInfo/ContactInfo.vue";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -30,6 +31,10 @@ const router = createRouter({
         {
             path: '/travelProducts',
             component: TravelProducts
+        },
+        {
+            path: '/contactInfo',
+            component: ContactInfo
         }
     ]
 })

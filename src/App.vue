@@ -1,5 +1,5 @@
 <template>
-  <img class="background-img-right" src="./pictures/icons/planet-earth.png" alt="">
+  <img class="background-img-right" src="./pictures/planet.png" alt="">
   <NavBar class="body"></NavBar>
   <router-view></router-view>
 </template>
@@ -71,9 +71,9 @@ export default {
   background: none;
 }
 .background-img-left {
-  margin-top: 70px;
-  width: 40%;
-  margin-left: 30px;
+  width: 50%;
+  background: none;
+  margin-top: -120px;
 }
 
 .arrow-down {
