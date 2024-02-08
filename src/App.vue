@@ -3,7 +3,7 @@
   <NavBar class="body"></NavBar>
   <router-view></router-view>
   <footer>
-    fofn
+    © 2024 TravelAgency. All rights reserved.
   </footer>
 </template>
 
@@ -66,6 +66,13 @@ export default {
   box-sizing: border-box;
 }
 
+footer {
+  width: 100%;
+  background-color: #227c8d;
+  color: white;
+  padding: 7px;
+  text-align: center;
+}
 
 
 .background-img-right {

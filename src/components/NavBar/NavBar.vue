@@ -58,8 +58,9 @@ header {
 .logo-text {
   float: left;
   margin-left: 30px;
-  margin-top: 25px;
+  margin-top: 30px;
   margin-bottom: -10px;
+  background: none;
   font-size: 45px;
   color: #fff;
 }
@@ -73,6 +74,7 @@ nav .nav-links{
   background-color: #33c1de;
   border-radius: 40px;
   box-shadow: 8px 8px 30px black;
+  border: 3px solid white;
 }
 
 nav ul li{

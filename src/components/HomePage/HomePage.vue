@@ -4,8 +4,7 @@
       <img class="background-img-left" src="../../pictures/icons/airplane.png" alt="">
       <h3 class="title">{{ title }}</h3>
       <p class="subtitle">{{ subtitle }}</p>
-      <h2 class="offer-title">{{ offer }}</h2>
-      <img class="arrow-down" src="../../pictures/icons/white-arrow.png" alt="">
+
     </div>
 
   </div>
