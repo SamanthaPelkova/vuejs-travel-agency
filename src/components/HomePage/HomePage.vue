@@ -4,7 +4,7 @@
       <img class="background-img-left" src="../../pictures/icons/airplane.png" alt="">
       <h3 class="title">{{ title }}</h3>
       <p class="subtitle">{{ subtitle }}</p>
-
+      <FreeTickets></FreeTickets>
     </div>
 
   </div>
@@ -14,8 +14,10 @@
 
 
 import {ref} from "vue";
+import FreeTickets from "@/components/HomePage/FreeTickets/FreeTickets.vue";
 
 export default {
+  components: {FreeTickets},
 
 
   setup() {

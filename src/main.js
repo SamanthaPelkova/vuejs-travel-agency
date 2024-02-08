@@ -7,6 +7,8 @@ import AboutUs from "@/components/AboutUs/AboutUs.vue";
 import TravelProducts from "@/components/Products/TravelProducts.vue";
 import HomePage from "@/components/HomePage/HomePage.vue";
 import ContactInfo from "@/components/ContactInfo/ContactInfo.vue";
+import FreeTicketsToSpain from "@/components/HomePage/FreeTickets/FreeTicketsTo/FreeTicketsToSpain.vue";
+import FreeTicketsToParis from "@/components/HomePage/FreeTickets/FreeTicketsTo/FreeTicketsToParis.vue";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -35,6 +37,14 @@ const router = createRouter({
         {
             path: '/contactInfo',
             component: ContactInfo
+        },
+        {
+            path: '/freeTicketsToSpain',
+            component: FreeTicketsToSpain
+        },
+        {
+            path: '/freeTicketsToParis',
+            component: FreeTicketsToParis
         }
     ]
 })
