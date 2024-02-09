@@ -20,6 +20,7 @@
               <router-link to="/contactInfo">Contact</router-link>
             </li>
           </ul>
+            <a href=""><img class="img-shopping-cart" src="../../pictures/icons/shopping-cart.png" alt=""></a>
         </nav>
     </header>
 </template>
@@ -97,6 +98,16 @@ a:hover {
   color: #f3ecce;
   text-decoration: underline;
   text-underline-offset: 0.2rem;
+}
+
+.img-shopping-cart {
+  width: 5%;
+  position: absolute;
+  margin-left: 1235px;
+  margin-top: 20px;
+  border-radius: 70px;
+  box-shadow: 5px 5px 90px black;
+  border: 3px solid white;
 }
 
 </style>

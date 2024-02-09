@@ -62,7 +62,7 @@ export default {
 }
 
 .title-free-tickets {
-  color: #15515d;
+  color: white;
   background: none;
   margin-top: -500px;
   width: 30%;
