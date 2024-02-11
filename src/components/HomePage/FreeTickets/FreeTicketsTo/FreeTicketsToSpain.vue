@@ -3,7 +3,12 @@
     <h1 class="spain-title">Spain</h1>
     <img src="../../../../pictures/icons/spain-cathedral.jpeg" class="spain-detail-img" alt="">
     <p class="spain-subtitle">Lorem Ipsum tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet,llegg til å be.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. m tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet,llegg til å be</p>
-    <h2></h2>
+    <div class="departure">
+      <h2 class="departure-title">DEPARTURE</h2>
+      <h3 class="departure-date">Date: 20/February/2024</h3>
+      <h3 class="departure-time">Time: 7:30 SEČ</h3>
+      <p class="departure-price">Price: 399CZK</p>
+    </div>
     <div class="buttons-spain">
       <button @click="decreaseQuantity" class="button-decrease-increase-spain minus">-</button>
       <input v-model="quantity" min="1" class="product-input-quantity-spain">
@@ -136,6 +141,40 @@ export default {
   background-color: white;
   font-weight: bold;
   color: #15515d;
+}
+
+.departure {
+  width: 20%;
+  text-align: center;
+  font-size: 20px;
+  position: absolute;
+  background: none;
+  margin-left: 1156px;
+  margin-top: -245px;
+  color: white;
+}
+
+.departure-title {
+  padding: 20px;
+  color: #227c8d;
+  background-color: white;
+  border-radius: 50px 1px 1px 1px;
+}
+
+.departure-time {
+  background-color: #2ca3b9;
+  padding: 10px;
+}
+
+.departure-date {
+  background-color: #2ca3b9;
+  padding: 10px;
+}
+
+.departure-price {
+  background-color: #15515d;
+  border-radius: 1px 1px 25px 50px;
+  padding: 15px;
 }
 
 
