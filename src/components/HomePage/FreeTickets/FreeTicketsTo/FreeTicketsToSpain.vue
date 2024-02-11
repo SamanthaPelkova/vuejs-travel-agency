@@ -126,6 +126,12 @@ export default {
   transition: 0.5s;
 }
 
+.add-to-basket-spain {animation: pulse 2s infinite}
+@keyframes pulse {
+  0%, 100% {transform: scale(1)}
+  50% {transform: scale(1.05); background-color: white; color: #227c8d}
+}
+
 .add-to-basket-spain:hover {
   background-color: white;
   font-weight: bold;

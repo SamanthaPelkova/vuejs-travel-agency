@@ -86,6 +86,12 @@ footer {
   margin-top: -120px;
 }
 
+.background-img-left { animation: bounce 2s infinite}
+@keyframes bounce {
+  0% {transform: translateY(0)}
+  50% {transform: translateY(-20px)}
+}
+
 .arrow-down {
   background: none;
   width: 10%;

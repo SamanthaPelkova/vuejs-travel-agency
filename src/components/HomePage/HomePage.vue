@@ -20,7 +20,7 @@ import {ref} from "vue";
 import FreeTickets from "@/components/HomePage/FreeTickets/FreeTickets.vue";
 
 export default {
-  components: {FreeTickets},
+  components: { FreeTickets },
 
 
   setup() {
