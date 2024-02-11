@@ -2,20 +2,14 @@
   <div class="content">
     <h2 class="travel-products-title"> {{ travelProductsTitle }} </h2>
     <h2 class="travel-products-subtitle"> {{ travelProductsSubtitle }} </h2>
-    <div class="travel-products"  v-for="product in travelProducts" :key="product.id">
-      <div class="travel-product">
-        <h3 class="product-title jq--about-us">{{ product.title }}</h3>
-        <h2 class="product-price">{{ product.price }}</h2>
-        <img :src="product.image" class="product-image" alt="">
-        <p class="product-description">{{ product.description }}</p>
-        <div class="product-quantity">
-          <button @click="decreaseQuantity" class="button-decrease-increase">-</button>
-          <input v-model="quantity" min="1" class="product-input-quantity">
-          <button @click="increaseQuantity" class="button-decrease-increase">+</button>
-          <button class="add-to-basket">{{ addToBasketTitle }}</button>
-        </div>
+      <div class="products">
+        <product-item
+        v-for="product in travelProducts"
+        :key="product.id"
+        :product="product"
+        class="product-item"
+        />
       </div>
-    </div>
     <button class="scroll-to-top-arrow" @click="scrollTo('.logo-text')"><img src="../../pictures/icons/white-arrow.png" alt=""></button>
   </div>
 </template>
@@ -24,8 +18,10 @@
 import { ref } from "vue";
 import { useScroll } from "@/script";
 import data from "@/data";
+import ProductItem from "@/components/Products/ProductItem.vue";
 
 export default {
+  components: {ProductItem},
 
   setup() {
     const products = ref(data)
@@ -79,113 +75,20 @@ export default {
   color: white;
   margin-top: 40px;
   margin-left: 20px;
-  width: 55%;
+  width: 100%;
   text-align: center;
 }
 
-.travel-products {
+.products {
   display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  width: 95%;
   flex-wrap: wrap;
 }
 
-.travel-products {
-  justify-content: center;
-  border-radius: 90px;
-  margin-top: 80px;
-  background-color: #227c8d;
-  padding: 40px;
-  width: 40%;
-  margin-left: 90px;
+.product-item{
+  width: calc(25% - 40px);
 }
-
-.travel-product {
-  width: calc(110% - 20px);
-  text-align: center;
-  padding: 30px;
-  border-radius: 90px;
-  background-color: white;
-  box-shadow: 10px 10px 50px black;
-
-}
-
-.product-image {
-  width: 65%;
-  border-radius: 170px;
-  background: white;
-  margin: 30px;
-}
-
-.product-title {
-  margin-left: 40px;
-  width: 40%;
-  background-color: white;
-  font-size: 40px;
-}
-
-.product-price {
-  font-size: 50px;
-  background-color: #227c8d;
-  width: 12%;
-  position: absolute;
-  margin-left: 390px;
-  border-radius: 100px;
-  margin-bottom: -80px;
-  padding: 10px;
-  color: white;
-}
-
-.product-description {
-  background-color: white;
-  font-size: 18px;
-  margin-bottom: 40px;
-}
-
-.product-quantity {
-  background-color: white;
-  width: 100%;
-}
-
-.button-decrease-increase {
-  padding: 20px;
-  font-size: 20px;
-  border: 2px solid #227c8d;
-  border-radius: 10px;
-  background-color: #2ea5bb;
-  margin: 10px;
-  font-weight: bold;
-  cursor: pointer;
-}
-.product-input-quantity {
-  padding: 20px;
-  width: 20%;
-  font-size: 20px;
-  border: 2px solid #227c8d;
-  background-color: white;
-  border-radius: 10px;
-  text-align: center;
-  font-weight: bold;
-}
-
-.add-to-basket {
-  width: 30%;
-  padding: 20px;
-  font-size: 20px;
-  color: white;
-  border: 2px solid #227c8d;
-  border-radius: 30px;
-  margin-left: 40px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.5s;
-}
-.add-to-basket:hover {
-  background-color: white;
-  font-weight: bold;
-  color: #15515d;
-}
-
-
-
-
 
 </style>
