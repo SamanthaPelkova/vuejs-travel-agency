@@ -9,6 +9,7 @@ import HomePage from "@/components/HomePage/HomePage.vue";
 import ContactInfo from "@/components/ContactInfo/ContactInfo.vue";
 import FreeTicketsToSpain from "@/components/HomePage/FreeTickets/FreeTicketsTo/FreeTicketsToSpain.vue";
 import FreeTicketsToParis from "@/components/HomePage/FreeTickets/FreeTicketsTo/FreeTicketsToParis.vue";
+import ShoppingBasket from "@/components/ShoppingBasket/ShoppingBasket.vue";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -45,6 +46,10 @@ const router = createRouter({
         {
             path: '/freeTicketsToParis',
             component: FreeTicketsToParis
+        },
+        {
+            path: '/shoppingBasket',
+            component: ShoppingBasket
         }
     ]
 })
