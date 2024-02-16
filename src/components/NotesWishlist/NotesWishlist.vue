@@ -8,7 +8,7 @@
         <h3 class="title-h3">{{ exampleTitle }}</h3>
         <p class="subtitle-h3">{{ exampleSubtitle }}</p>
       </div>
-      <div class="add-notes">
+      <form class="add-notes">
         <h3 class="state">{{ placeToTravel }}</h3>
         <input type="text" placeholder="Paris..." v-model="enteredTravelTitle">
         <h3>{{ whatToSee }}</h3>
@@ -21,7 +21,7 @@
         <input type="text" placeholder="Nováková" v-model="enteredTravelLastName">
         <h3>{{ email }}</h3>
         <input type="email" placeholder="jana.novakova@gmail.com" v-model="enteredTravelEmail">
-      </div>
+      </form>
         <button @click="addNotesItem" type="submit" class="button-submit">{{ submit }}</button>
     </div>
     <div class="entered-notes">
