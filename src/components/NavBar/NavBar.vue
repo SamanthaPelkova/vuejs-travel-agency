@@ -20,7 +20,13 @@
               <router-link to="/contactInfo">Contact</router-link>
             </li>
           </ul>
-            <a href=""><img class="img-shopping-cart" src="../../pictures/icons/shopping-cart.png" alt=""></a>
+          <ul>
+            <li>
+              <router-link to="/shoppingBasket">
+                <a href=""><img class="img-shopping-cart" src="../../pictures/icons/shopping-cart.png" alt=""></a>
+              </router-link>
+            </li>
+          </ul>
         </nav>
     </header>
 </template>
