@@ -33,7 +33,7 @@
 
 <script>
 
-import {useScroll} from "@/script";
+import { useScroll } from "@/script";
 
 export default {
     setup() {
