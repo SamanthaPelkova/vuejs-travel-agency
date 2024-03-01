@@ -92,15 +92,6 @@ footer {
   50% {transform: translateY(-20px)}
 }
 
-.arrow-down {
-  background: none;
-  width: 10%;
-  margin-top: 620px;
-  transform: rotate(-0.13turn);
-  margin-left: 200px;
-  position: absolute;
-}
-
 .title {
   color: white;
   margin-top: -800px;

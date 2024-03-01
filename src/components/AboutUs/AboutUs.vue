@@ -170,4 +170,5 @@ export default {
   margin-left: 1750px;
 }
 
+
 </style>
