@@ -10,7 +10,7 @@
         <p class="date-spain">20/2/24, 7:30</p>
       </li>
       <li>
-        <h2 class="title-spain-ticket">Paris</h2>
+        <h2 class="title-paris-ticket">Paris</h2>
         <a class="first"><router-link to="/freeTicketsToParis">Details</router-link></a>
         <img src="../../../pictures/icons/eiffel-tower.jpeg" alt="" class="paris-img">
         <h4 class="free-ticket-price-second">from 299CZK</h4>
@@ -43,39 +43,50 @@ export default {
 
 <style>
 .title-spain-ticket {
-  margin-left: -150px;
+  margin-left: -280px;
   background-color: white;
   border-radius: 40px 40px 1px 1px;
   color: deepskyblue;
   font-weight: bold;
   font-size: 30px;
   text-decoration: none;
-  transition: 1s;
   position: absolute;
   margin-top: -30px;
-  width: 16.5%;
+  width: 12.5%;
+}
+
+.title-paris-ticket {
+  margin-left: -280px;
+  background-color: white;
+  border-radius: 40px 40px 1px 1px;
+  color: deepskyblue;
+  font-weight: bold;
+  font-size: 30px;
+  text-decoration: none;
+  position: absolute;
+  margin-top: -30px;
+  width: 12.5%;
 }
 
 .title-spain-ticket {
-  margin-right: 70px;
-  padding: 15px;
+  padding: 11px;
 }
 
 .title-free-tickets {
   color: white;
   background: none;
-  margin-top: -500px;
+  margin-top: -400px;
   width: 30%;
   float: right;
-  margin-right: 280px;
+  margin-right: 320px;
   text-decoration: 3px underline;
 }
 
 .links-free-tickets {
-  width: 35%;
+  width: 30%;
   float: right;
   display: flex;
-  margin-top: -420px;
+  margin-top: -300px;
   list-style: none;
 }
 
@@ -87,7 +98,7 @@ export default {
 
 .links-free-tickets li .first {
   position: absolute;
-  margin-top: 35px;
+  margin-top: 20px;
   margin-left: -140px;
 }
 
@@ -100,12 +111,12 @@ export default {
 }
 
 .free-ticket-price-first {
-  font-size: 20px;
-  background-color: #227c8d;
+  font-size: 15px;
+  background-color: rgba(34, 124, 141, 0.6);
   width: 8%;
   position: absolute;
-  margin-top: -30px;
-  margin-left: -29px;
+  margin-top: -46px;
+  margin-left: -205px;
   border-radius: 30px 0px 0px 30px;
   padding: 10px;
   color: white;
@@ -124,16 +135,16 @@ export default {
 }
 
 .spain-img {
-  width: 134%;
+  width: 145%;
   background: none;
-  margin-left: -150px;
+  margin-left: -280px;
   margin-top: 30px;
   border-radius: 1px 1px 20px 20px;
 }
 
 .paris-img {
   width: 134%;
-  margin-left: -150px;
+  margin-left: -200px;
   margin-top: 30px;
   border-radius: 1px 1px 20px 20px;
 }
