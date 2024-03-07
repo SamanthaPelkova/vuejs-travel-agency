@@ -107,9 +107,9 @@ footer {
 
 .subtitle {
   color: white;
-  width: 35%;
+  width: 23%;
   text-align: center;
-  margin-left: 885px;
+  margin-left: 1030px;
   margin-top: -530px;
   position: absolute;
   background: none;
