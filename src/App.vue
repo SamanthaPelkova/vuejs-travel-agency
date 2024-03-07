@@ -83,7 +83,8 @@ footer {
 .background-img-left {
   width: 50%;
   background: none;
-  margin-top: -120px;
+  margin-top: -90px;
+  margin-left: -150px;
 }
 
 .background-img-left { animation: bounce 2s infinite}
@@ -94,22 +95,22 @@ footer {
 
 .title {
   color: white;
-  margin-top: -800px;
+  margin-top: -600px;
   position: absolute;
   background: none;
-  padding: 0px 30px 0px 30px;
+  padding: 1px 30px 1px 30px;
   border-radius: 60px;
   text-align: center;
-  margin-left: 985px;
-  font-size: 65px;
+  margin-left: 805px;
+  font-size: 45px;
 }
 
 .subtitle {
   color: white;
   width: 35%;
   text-align: center;
-  margin-left: 1085px;
-  margin-top: -710px;
+  margin-left: 885px;
+  margin-top: -530px;
   position: absolute;
   background: none;
   font-size: 17px;

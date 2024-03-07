@@ -58,7 +58,7 @@ header {
 
 .logo {
   float: left;
-  width: 8%;
+  width: 10%;
   margin-top: -25px;
 }
 
@@ -75,9 +75,9 @@ header {
 nav .nav-links {
   display: flex;
   float: right;
-  margin-top: 25px;
-  margin-right: -650px;
-  padding-right: 50px;
+  margin-top: 15px;
+  margin-right: -400px;
+  padding-right: 30px;
   background-color: #33c1de;
   border-radius: 40px;
   box-shadow: 8px 8px 30px black;
@@ -87,7 +87,7 @@ nav .nav-links {
 nav ul li {
   margin: 20px;
   align-items: center;
-  font-size: 30px;
+  font-size: 20px;
   list-style: none;
   background-color: #33c1de;
 }
@@ -109,7 +109,7 @@ a:hover {
 .img-shopping-cart {
   width: 5%;
   position: absolute;
-  margin-left: 1235px;
+  margin-left: 805px;
   margin-top: 20px;
   border-radius: 70px;
   box-shadow: 5px 5px 90px black;
