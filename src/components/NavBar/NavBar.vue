@@ -72,7 +72,7 @@ header {
   color: #fff;
 }
 
-nav .nav-links{
+nav .nav-links {
   display: flex;
   float: right;
   margin-top: 25px;
@@ -84,7 +84,7 @@ nav .nav-links{
   border: 3px solid white;
 }
 
-nav ul li{
+nav ul li {
   margin: 20px;
   align-items: center;
   font-size: 30px;
@@ -92,7 +92,7 @@ nav ul li{
   background-color: #33c1de;
 }
 
-a{
+a {
   text-decoration: none;
   background-color: #33c1de;
   color: white;
