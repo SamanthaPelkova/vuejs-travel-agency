@@ -11,7 +11,7 @@
       </li>
       <li>
         <h2 class="title-paris-ticket">Paris</h2>
-        <a class="first"><router-link to="/freeTicketsToParis">Details</router-link></a>
+        <a class="second"><router-link to="/freeTicketsToParis">Details</router-link></a>
         <img src="../../../pictures/icons/eiffel-tower.jpeg" alt="" class="paris-img">
         <h4 class="free-ticket-price-second">from 299CZK</h4>
         <p class="date-paris">18/2/24, 19:30</p>
@@ -45,20 +45,20 @@ export default {
 .title-spain-ticket {
   margin-left: -280px;
   background-color: white;
-  border-radius: 40px 40px 1px 1px;
+  border-radius: 40px 40px 11px 1px;
   color: deepskyblue;
   font-weight: bold;
   font-size: 30px;
   text-decoration: none;
   position: absolute;
   margin-top: -30px;
-  width: 12.5%;
+  width: 13%;
 }
 
 .title-paris-ticket {
   margin-left: -250px;
   background-color: white;
-  border-radius: 40px 40px 1px 1px;
+  border-radius: 40px 40px 11px 1px;
   color: deepskyblue;
   font-weight: bold;
   font-size: 30px;
@@ -66,7 +66,7 @@ export default {
   position: absolute;
   margin-top: -30px;
   padding: 10px;
-  width: 12.5%;
+  width: 13%;
 }
 
 .title-spain-ticket {
@@ -99,13 +99,19 @@ export default {
 
 .links-free-tickets li .first {
   position: absolute;
-  margin-top: 20px;
-  margin-left: -140px;
+  margin-top: 15px;
+  margin-left: -159px;
+}
+
+.links-free-tickets li .second {
+  position: absolute;
+  margin-top: 15px;
+  margin-left: -129px;
 }
 
 .links-free-tickets li a {
   background-color: white;
-  font-size: 20px;
+  font-size: 15px;
   padding: 5px;
   border-radius: 1px 1px 20px 20px;
   color: #227c8d;
@@ -116,27 +122,27 @@ export default {
   background-color: rgba(34, 124, 141, 0.6);
   width: 8%;
   position: absolute;
-  margin-top: -46px;
-  margin-left: -205px;
-  border-radius: 30px 0px 0px 30px;
+  margin-top: -25px;
+  margin-left: -220px;
+  border-radius: 30px 1px 1px 30px;
   padding: 10px;
   color: white;
 }
 
 .free-ticket-price-second {
-  font-size: 20px;
-  background-color: #227c8d;
+  font-size: 15px;
+  background-color: rgba(34, 124, 141, 0.6);
   width: 8%;
   position: absolute;
-  margin-top: -30px;
-  margin-left: -30px;
-  border-radius: 30px 0px 0px 30px;
+  margin-top: -25px;
+  margin-left: -197px;
+  border-radius: 30px 1px 1px 30px;
   padding: 10px;
   color: white;
 }
 
 .spain-img {
-  width: 162%;
+  width: 165%;
   background: none;
   margin-left: -280px;
   margin-top: 30px;
@@ -144,7 +150,7 @@ export default {
 }
 
 .paris-img {
-  width: 152%;
+  width: 158%;
   margin-left: -250px;
   margin-top: 30px;
   border-radius: 1px 1px 20px 20px;
@@ -157,9 +163,9 @@ export default {
   color: #227c8d;
   font-weight: bold;
   transform: rotate(-0.75turn);
-  border-radius: 0px 20px 0px 20px;
-  margin-left: 85px;
-  margin-top: -65px;
+  border-radius: 1px 20px 1px 20px;
+  margin-left: -150px;
+  margin-top: -67px;
 }
 
 .date-paris {
@@ -169,9 +175,9 @@ export default {
   color: #227c8d;
   font-weight: bold;
   transform: rotate(-0.75turn);
-  border-radius: 0px 20px 0px 20px;
-  margin-left: 79px;
-  margin-top: -70px;
+  border-radius: 1px 20px 1px 20px;
+  margin-left: -130px;
+  margin-top: -72px;
 }
 
 
