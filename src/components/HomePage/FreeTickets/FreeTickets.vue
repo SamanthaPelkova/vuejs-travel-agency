@@ -56,7 +56,7 @@ export default {
 }
 
 .title-paris-ticket {
-  margin-left: -280px;
+  margin-left: -250px;
   background-color: white;
   border-radius: 40px 40px 1px 1px;
   color: deepskyblue;
@@ -65,6 +65,7 @@ export default {
   text-decoration: none;
   position: absolute;
   margin-top: -30px;
+  padding: 10px;
   width: 12.5%;
 }
 
@@ -135,7 +136,7 @@ export default {
 }
 
 .spain-img {
-  width: 145%;
+  width: 162%;
   background: none;
   margin-left: -280px;
   margin-top: 30px;
@@ -143,7 +144,7 @@ export default {
 }
 
 .paris-img {
-  width: 134%;
+  width: 162%;
   margin-left: -200px;
   margin-top: 30px;
   border-radius: 1px 1px 20px 20px;
