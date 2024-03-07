@@ -144,8 +144,8 @@ export default {
 }
 
 .paris-img {
-  width: 162%;
-  margin-left: -200px;
+  width: 152%;
+  margin-left: -250px;
   margin-top: 30px;
   border-radius: 1px 1px 20px 20px;
 }
