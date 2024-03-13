@@ -109,8 +109,8 @@ a:hover {
 .img-shopping-cart {
   width: 5%;
   position: absolute;
-  margin-left: 805px;
-  margin-top: 20px;
+  margin-left: 925px;
+  margin-top: 10px;
   border-radius: 70px;
   box-shadow: 5px 5px 90px black;
   border: 3px solid white;
