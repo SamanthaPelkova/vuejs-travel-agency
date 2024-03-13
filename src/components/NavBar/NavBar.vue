@@ -110,7 +110,7 @@ a:hover {
   width: 5%;
   position: absolute;
   margin-left: 925px;
-  margin-top: 10px;
+  margin-top: 12px;
   border-radius: 70px;
   box-shadow: 5px 5px 90px black;
   border: 3px solid white;
