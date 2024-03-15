@@ -45,20 +45,20 @@ export default {
 .title-spain-ticket {
   margin-left: -280px;
   background-color: white;
-  border-radius: 40px 40px 11px 1px;
+  border-radius: 40px 40px 1px 1px;
   color: deepskyblue;
   font-weight: bold;
   font-size: 30px;
   text-decoration: none;
   position: absolute;
   margin-top: -30px;
-  width: 13%;
+  width: 14.65%;
 }
 
 .title-paris-ticket {
   margin-left: -250px;
   background-color: white;
-  border-radius: 40px 40px 11px 1px;
+  border-radius: 40px 40px 1px 1px;
   color: deepskyblue;
   font-weight: bold;
   font-size: 30px;
@@ -66,7 +66,7 @@ export default {
   position: absolute;
   margin-top: -30px;
   padding: 10px;
-  width: 13%;
+  width: 14.6%;
 }
 
 .title-spain-ticket {
