@@ -1,5 +1,4 @@
 <template>
-  <img class="background-img-right" src="./pictures/planet.png" alt="">
   <NavBar class="body"></NavBar>
   <router-view></router-view>
 
@@ -58,7 +57,6 @@ export default {
 <style>
 * {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  background-color: #3ACBE8;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -127,6 +125,10 @@ footer {
   margin-left: 1105px;
   font-size: 45px;
   transform: rotate(-0.960turn);
+}
+
+.body {
+  position: absolute;
 }
 
 

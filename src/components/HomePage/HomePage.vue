@@ -1,7 +1,9 @@
 <template>
   <div>
     <div class="content">
-      <img class="background-img-left" src="../../pictures/icons/homepage-airplane.png" alt="">
+      <video autoplay muted loop id="myVideo" class="video-background">
+        <source src="../../video/video-background.mp4" type="video/mp4">
+      </video>
       <h3 class="title">{{ title }}</h3>
       <p class="subtitle">{{ subtitle }}</p>
       <FreeTickets></FreeTickets>
@@ -44,5 +46,11 @@ export default {
 </script>
 
 <style>
+.video-background {
+  width: 100%;
+  z-index: 1;
+}
+
+
 
 </style>

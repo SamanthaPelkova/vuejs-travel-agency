@@ -53,7 +53,6 @@ header {
   width: 100%;
   margin-top: -10px;
   height: 100px;
-  margin-left: -10px;
 }
 
 .logo {
@@ -64,7 +63,6 @@ header {
 
 .logo-text {
   float: left;
-  margin-left: 30px;
   margin-top: 30px;
   margin-bottom: -10px;
   background: none;
@@ -76,9 +74,8 @@ nav .nav-links {
   display: flex;
   float: right;
   margin-top: 15px;
-  margin-right: -400px;
   padding-right: 30px;
-  background-color: #33c1de;
+  margin-right: 130px;
   border-radius: 40px;
   box-shadow: 8px 8px 30px black;
   border: 3px solid white;
@@ -89,12 +86,10 @@ nav ul li {
   align-items: center;
   font-size: 20px;
   list-style: none;
-  background-color: #33c1de;
 }
 
 a {
   text-decoration: none;
-  background-color: #33c1de;
   color: white;
   transition: 0.5s;
   margin-top: 10px;
@@ -109,7 +104,7 @@ a:hover {
 .img-shopping-cart {
   width: 5%;
   position: absolute;
-  margin-left: 925px;
+  margin-left: 1050px;
   margin-top: 12px;
   border-radius: 70px;
   box-shadow: 5px 5px 90px black;
