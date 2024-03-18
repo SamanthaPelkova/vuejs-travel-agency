@@ -6,7 +6,7 @@
       </video>
       <h3 class="title">{{ title }}</h3>
       <p class="subtitle">{{ subtitle }}</p>
-      <FreeTickets></FreeTickets>
+      <FreeTickets/>
     </div>
   </div>
 </template>
