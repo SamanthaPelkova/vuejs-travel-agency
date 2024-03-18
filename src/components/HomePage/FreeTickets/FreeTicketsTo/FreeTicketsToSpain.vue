@@ -18,7 +18,7 @@
       <button class="add-to-basket-spain">Přidat do košíku</button>
     </div>
     <div class="remaining-time-spain">
-      <h1 class="remaining-time-spain-title">Tahle nabídka brzy končí</h1>
+      <h1 class="remaining-time-spain-title">Tahle nabídka brzy končí!</h1>
       <h2 class="remaining-time-spain-timer">{{ remainingTime }}</h2>
     </div>
   </div>
@@ -167,13 +167,13 @@ body {
   transition: 0.5s;
 }
 
-.buttons-spain .add-to-basket-spain {animation: pulse 2s infinite}
+.add-to-basket-spain {animation: pulse 2s infinite}
 @keyframes pulse {
   0%, 100% {transform: scale(1)}
   50% {transform: scale(1.05); background-color: white; color: #172c64}
 }
 
-.buttons-spain .add-to-basket-spain:hover {
+.add-to-basket-spain:hover {
   background-color: white;
   color: #172c64;
   font-weight: bold;
@@ -210,6 +210,22 @@ body {
   background-color: #172c64;
   border-radius: 1px 1px 50px 50px;
   padding: 15px;
+}
+
+.remaining-time-spain {
+  float: right;
+  margin-right: 465px;
+  margin-top: 10px;
+  background-color: #172c64;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.remaining-time-spain-timer {
+  font-size: 45px;
+  color: #0252ec;
 }
 
 
