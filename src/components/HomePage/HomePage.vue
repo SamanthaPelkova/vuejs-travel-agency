@@ -26,16 +26,14 @@ export default {
 
 
   setup() {
-    const title = ref('Welcome to our website!')
+    const title = ref('Vítejte na našich stránkách!')
     const subtitle = ref('Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem I ek nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet,llegg til å be')
-    const offer = ref('Look below to see what we offer')
 
 
 
     return {
       title,
-      subtitle,
-      offer
+      subtitle
     }
   }
 
@@ -48,7 +46,6 @@ export default {
 <style>
 .video-background {
   width: 100%;
-  z-index: 1;
 }
 
 

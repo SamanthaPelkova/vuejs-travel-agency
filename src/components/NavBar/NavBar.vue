@@ -53,6 +53,7 @@ header {
   width: 100%;
   margin-top: -10px;
   height: 100px;
+  position: absolute;
 }
 
 .logo {

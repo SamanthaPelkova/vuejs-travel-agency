@@ -129,6 +129,7 @@ footer {
 
 .body {
   position: absolute;
+  z-index: 200;
 }
 
 
