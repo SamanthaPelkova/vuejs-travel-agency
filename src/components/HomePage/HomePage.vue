@@ -7,6 +7,7 @@
       <h3 class="title">{{ title }}</h3>
       <p class="subtitle">{{ subtitle }}</p>
       <FreeTickets/>
+      <a class="button-homepage-read-more">Zjistit více</a>
     </div>
   </div>
 </template>
@@ -69,6 +70,21 @@ body {
   position: absolute;
   background: none;
   font-size: 17px;
+}
+
+.button-homepage-read-more {
+  width: 20%;
+  position: absolute;
+  padding: 20px;
+  margin-left: 1200px;
+  margin-top: 70px;
+  border-radius: 29px;
+  background-color: rgba(23, 44, 100, 0.56);
+  text-align: center;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 
