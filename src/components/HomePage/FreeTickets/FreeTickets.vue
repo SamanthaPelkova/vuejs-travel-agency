@@ -3,17 +3,17 @@
     <h2 class="title-free-tickets">Free last-minute tickets to:</h2>
     <ul class="links-free-tickets">
       <li>
-        <h2 class="title-spain-ticket">Spain</h2>
-        <a class="first"><router-link to="/freeTicketsToSpain">Details</router-link></a>
+        <h2 class="title-spain-ticket">Španělsko</h2>
+        <a class="first"><router-link to="/freeTicketsToSpain">Detail</router-link></a>
         <img src="../../../pictures/icons/spain-cathedral-image.jpeg" alt="" class="spain-img">
-        <h4 class="free-ticket-price-first"> from 399CZK</h4>
+        <h4 class="free-ticket-price-first">od 399CZK</h4>
         <p class="date-spain">20/2/24, 7:30</p>
       </li>
       <li>
-        <h2 class="title-paris-ticket">Paris</h2>
-        <a class="second"><router-link to="/freeTicketsToParis">Details</router-link></a>
+        <h2 class="title-paris-ticket">Paříž</h2>
+        <a class="second"><router-link to="/freeTicketsToParis">Detail</router-link></a>
         <img src="../../../pictures/icons/paris-image.jpeg" alt="" class="paris-img">
-        <h4 class="free-ticket-price-second">from 299CZK</h4>
+        <h4 class="free-ticket-price-second">od 299CZK</h4>
         <p class="date-paris">18/2/24, 19:30</p>
       </li>
     </ul>
