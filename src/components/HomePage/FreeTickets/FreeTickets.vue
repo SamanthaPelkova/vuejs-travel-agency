@@ -43,7 +43,6 @@ export default {
 
 <style>
 .title-spain-ticket {
-  margin-left: -1150px;
   background-color: rgba(255, 255, 255, 0.71);
   border-radius: 40px 40px 1px 1px;
   color: #00308F;
@@ -51,12 +50,12 @@ export default {
   font-size: 30px;
   text-decoration: none;
   position: absolute;
-  margin-top: -80px;
+  margin-top: -90px;
+  margin-left: 30px;
   width: 14.65%;
 }
 
 .title-paris-ticket {
-  margin-left: -950px;
   background-color: rgba(255, 255, 255, 0.71);
   border-radius: 40px 40px 1px 1px;
   color: #00308F;
@@ -64,7 +63,8 @@ export default {
   font-size: 30px;
   text-decoration: none;
   position: absolute;
-  margin-top: -80px;
+  margin-top: -88px;
+  margin-left: 221px;
   padding: 10px;
   width: 14.6%;
 }
@@ -76,7 +76,7 @@ export default {
 .title-free-tickets {
   color: white;
   background: none;
-  margin-top: -450px;
+  margin-top: -165px;
   margin-left: 30px;
   width: 30%;
   float: right;
@@ -87,7 +87,7 @@ export default {
 
 .links-free-tickets {
   width: 30%;
-  float: right;
+  margin-left: 20px;
   display: flex;
   margin-top: -300px;
   list-style: none;
@@ -96,20 +96,20 @@ export default {
 .links-free-tickets li {
   text-decoration: none;
   padding-right: 100px;
-  color: white;
+  background-color: white;
 }
 
 .links-free-tickets li .first {
   position: absolute;
-  margin-top: 20px;
-  margin-left: -165px;
+  margin-left: 40px;
+  margin-top: -27px;
   z-index: 1;
 }
 
 .links-free-tickets li .second {
   position: absolute;
-  margin-top: 20px;
-  margin-left: 5px;
+  margin-top: -27px;
+  margin-left: 230px;
   z-index: 1;
 }
 
@@ -118,16 +118,16 @@ export default {
   font-size: 15px;
   padding: 5px;
   border-radius: 1px 1px 20px 20px;
-  color: #227c8d;
+  color: #172c64;
 }
 
 .free-ticket-price-first {
   font-size: 15px;
-  background-color: rgba(34, 124, 141, 0.6);
+  background-color: rgba(23, 44, 100, 0.63);
   width: 8%;
   position: absolute;
   margin-top: 202px;
-  margin-left: -154px;
+  margin-left: 110px;
   border-radius: 30px 1px 1px 30px;
   padding: 10px;
   color: white;
@@ -135,28 +135,29 @@ export default {
 
 .free-ticket-price-second {
   font-size: 15px;
-  background-color: rgba(34, 124, 141, 0.6);
+  background-color: rgba(23, 44, 100, 0.63);
   width: 8%;
   position: absolute;
   margin-top: 206px;
-  margin-left: 50px;
+  margin-left: 300px;
   border-radius: 30px 1px 1px 30px;
   padding: 10px;
   color: white;
 }
 
 .spain-img {
-  width: 12%;
+  width: 14.7%;
   background: none;
-  margin-left: -195px;
-  margin-top: 30px;
+  margin-top: -27px;
+  margin-left: 30px;
   border-radius: 1px 1px 20px 20px;
   position: absolute;
 }
 
 .paris-img {
-  width: 12%;
-  margin-top: 30px;
+  width: 14.7%;
+  margin-top: -27px;
+  margin-left: 220px;
   border-radius: 1px 1px 20px 20px;
   position: absolute;
 }
@@ -165,11 +166,11 @@ export default {
   position: absolute;
   background-color: white;
   padding: 10px;
-  color: #227c8d;
+  color: #172c64;
   font-weight: bold;
   transform: rotate(-0.75turn);
   border-radius: 1px 20px 1px 20px;
-  margin-left: -60px;
+  margin-left: 204px;
   margin-top: 160px;
 }
 
@@ -177,11 +178,11 @@ export default {
   position: absolute;
   background-color: white;
   padding: 10px;
-  color: #227c8d;
+  color: #172c64;
   font-weight: bold;
   transform: rotate(-0.75turn);
   border-radius: 1px 20px 1px 20px;
-  margin-left: 130px;
+  margin-left: 390px;
   margin-top: 160px;
 }
 

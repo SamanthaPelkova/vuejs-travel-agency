@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="to-spain-detail-body">
     <h1 class="spain-title">Spain</h1>
     <img src="../../../../pictures/icons/spain-cathedral-image.jpeg" class="spain-detail-img" alt="">
     <p class="spain-subtitle">Lorem Ipsum tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet,llegg til å be.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. m tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet,llegg til å be</p>
@@ -53,6 +53,10 @@ export default {
 </script>
 
 <style>
+body{
+  background-color: #0039a6;
+}
+
 .spain-title {
   background-color: white;
   padding: 30px 120px;

@@ -8,10 +8,6 @@
       <p class="subtitle">{{ subtitle }}</p>
       <FreeTickets></FreeTickets>
     </div>
-    <footer>
-      © 2024 TravelAgency. All rights reserved.
-    </footer>
-
   </div>
 </template>
 
@@ -44,12 +40,13 @@ export default {
 </script>
 
 <style>
-.homepage-body {
+body {
   background-color: #0039a6;
 }
 .video-background {
   width: 100%;
-  border-bottom: 4px solid white;
+  border-bottom: 4px solid rgba(255, 255, 255, 0.71);
+  border-radius: 20px;
 }
 .title {
   color: white;

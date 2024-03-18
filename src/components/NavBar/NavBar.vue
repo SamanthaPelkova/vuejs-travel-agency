@@ -1,7 +1,7 @@
 <template>
     <header>
       <router-link class="home-page-redirect" to="/" ><img class="logo" alt="" src="../../pictures/icons/logo.png"></router-link>
-      <h1 class="logo-text">Procestuj svět s námi</h1>
+      <h1 class="logo-text">Procestuj svět s LOOD</h1>
         <nav id="desktop-nav">
           <ul class="nav-links">
             <li @click="scrollTo('.about-us-title')">
@@ -67,7 +67,7 @@ header {
   margin-top: 30px;
   margin-bottom: -10px;
   background: none;
-  font-size: 45px;
+  font-size: 50px;
   color: #fff;
 }
 
@@ -105,7 +105,7 @@ a:hover {
 .img-shopping-cart {
   width: 5%;
   position: absolute;
-  margin-left: 1050px;
+  margin-left: 876px;
   margin-top: 12px;
   border-radius: 70px;
   box-shadow: 5px 5px 90px black;
