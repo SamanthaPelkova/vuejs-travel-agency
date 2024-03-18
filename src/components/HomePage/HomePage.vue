@@ -17,6 +17,7 @@
 
 import {ref} from "vue";
 import FreeTickets from "@/components/HomePage/FreeTickets/FreeTickets.vue";
+import {useScroll} from "@/script";
 
 export default {
   components: { FreeTickets },
@@ -25,12 +26,13 @@ export default {
   setup() {
     const title = ref('Vítejte na našich stránkách!')
     const subtitle = ref('Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem I ek nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet,llegg til å be')
-
+    const { scrollTo } = useScroll()
 
 
     return {
       title,
-      subtitle
+      subtitle,
+      scrollTo
     }
   }
 
