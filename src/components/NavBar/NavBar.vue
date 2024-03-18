@@ -1,7 +1,7 @@
 <template>
     <header>
       <router-link class="home-page-redirect" to="/" ><img class="logo" alt="" src="../../pictures/icons/logo.png"></router-link>
-      <h1 class="logo-text">Travel The World</h1>
+      <h1 class="logo-text">Procestuj svět s námi</h1>
         <nav id="desktop-nav">
           <ul class="nav-links">
             <li @click="scrollTo('.about-us-title')">
