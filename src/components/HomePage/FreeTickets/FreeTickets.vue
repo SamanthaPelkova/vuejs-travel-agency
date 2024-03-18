@@ -5,14 +5,14 @@
       <li>
         <h2 class="title-spain-ticket">Spain</h2>
         <a class="first"><router-link to="/freeTicketsToSpain">Details</router-link></a>
-        <img src="../../../pictures/icons/spain-cathedral.jpeg" alt="" class="spain-img">
+        <img src="../../../pictures/icons/spain-cathedral-image.jpeg" alt="" class="spain-img">
         <h4 class="free-ticket-price-first"> from 399CZK</h4>
         <p class="date-spain">20/2/24, 7:30</p>
       </li>
       <li>
         <h2 class="title-paris-ticket">Paris</h2>
         <a class="second"><router-link to="/freeTicketsToParis">Details</router-link></a>
-        <img src="../../../pictures/icons/eiffel-tower.jpeg" alt="" class="paris-img">
+        <img src="../../../pictures/icons/paris-image.jpeg" alt="" class="paris-img">
         <h4 class="free-ticket-price-second">from 299CZK</h4>
         <p class="date-paris">18/2/24, 19:30</p>
       </li>
@@ -43,28 +43,28 @@ export default {
 
 <style>
 .title-spain-ticket {
-  margin-left: -280px;
-  background-color: white;
+  margin-left: -1150px;
+  background-color: rgba(255, 255, 255, 0.71);
   border-radius: 40px 40px 1px 1px;
-  color: deepskyblue;
+  color: #00308F;
   font-weight: bold;
   font-size: 30px;
   text-decoration: none;
   position: absolute;
-  margin-top: -30px;
+  margin-top: -80px;
   width: 14.65%;
 }
 
 .title-paris-ticket {
-  margin-left: -250px;
-  background-color: white;
+  margin-left: -950px;
+  background-color: rgba(255, 255, 255, 0.71);
   border-radius: 40px 40px 1px 1px;
-  color: deepskyblue;
+  color: #00308F;
   font-weight: bold;
   font-size: 30px;
   text-decoration: none;
   position: absolute;
-  margin-top: -30px;
+  margin-top: -80px;
   padding: 10px;
   width: 14.6%;
 }
@@ -76,11 +76,13 @@ export default {
 .title-free-tickets {
   color: white;
   background: none;
-  margin-top: -400px;
+  margin-top: -450px;
+  margin-left: 30px;
   width: 30%;
   float: right;
   margin-right: 320px;
   text-decoration: 3px underline;
+  position: absolute;
 }
 
 .links-free-tickets {
@@ -99,14 +101,16 @@ export default {
 
 .links-free-tickets li .first {
   position: absolute;
-  margin-top: 15px;
-  margin-left: -159px;
+  margin-top: 20px;
+  margin-left: -165px;
+  z-index: 1;
 }
 
 .links-free-tickets li .second {
   position: absolute;
-  margin-top: 15px;
-  margin-left: -129px;
+  margin-top: 20px;
+  margin-left: 5px;
+  z-index: 1;
 }
 
 .links-free-tickets li a {
@@ -122,8 +126,8 @@ export default {
   background-color: rgba(34, 124, 141, 0.6);
   width: 8%;
   position: absolute;
-  margin-top: -25px;
-  margin-left: -220px;
+  margin-top: 202px;
+  margin-left: -154px;
   border-radius: 30px 1px 1px 30px;
   padding: 10px;
   color: white;
@@ -134,26 +138,27 @@ export default {
   background-color: rgba(34, 124, 141, 0.6);
   width: 8%;
   position: absolute;
-  margin-top: -25px;
-  margin-left: -197px;
+  margin-top: 206px;
+  margin-left: 50px;
   border-radius: 30px 1px 1px 30px;
   padding: 10px;
   color: white;
 }
 
 .spain-img {
-  width: 165%;
+  width: 12%;
   background: none;
-  margin-left: -280px;
+  margin-left: -195px;
   margin-top: 30px;
   border-radius: 1px 1px 20px 20px;
+  position: absolute;
 }
 
 .paris-img {
-  width: 158%;
-  margin-left: -250px;
+  width: 12%;
   margin-top: 30px;
   border-radius: 1px 1px 20px 20px;
+  position: absolute;
 }
 
 .date-spain {
@@ -164,8 +169,8 @@ export default {
   font-weight: bold;
   transform: rotate(-0.75turn);
   border-radius: 1px 20px 1px 20px;
-  margin-left: -150px;
-  margin-top: -67px;
+  margin-left: -60px;
+  margin-top: 160px;
 }
 
 .date-paris {
@@ -176,8 +181,8 @@ export default {
   font-weight: bold;
   transform: rotate(-0.75turn);
   border-radius: 1px 20px 1px 20px;
-  margin-left: -130px;
-  margin-top: -72px;
+  margin-left: 130px;
+  margin-top: 160px;
 }
 
 

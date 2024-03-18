@@ -1,7 +1,6 @@
 <template>
   <NavBar class="body"></NavBar>
   <router-view></router-view>
-
 </template>
 
 <script>
@@ -64,7 +63,7 @@ export default {
 
 footer {
   width: 100%;
-  background-color: #227c8d;
+  background-color: #00308F;
   color: white;
   padding: 7px;
   text-align: center;
@@ -89,29 +88,6 @@ footer {
 @keyframes bounce {
   0% {transform: translateY(0)}
   50% {transform: translateY(-20px)}
-}
-
-.title {
-  color: white;
-  margin-top: -600px;
-  position: absolute;
-  background: none;
-  padding: 1px 30px 1px 30px;
-  border-radius: 60px;
-  text-align: center;
-  margin-left: 805px;
-  font-size: 45px;
-}
-
-.subtitle {
-  color: white;
-  width: 23%;
-  text-align: center;
-  margin-left: 1030px;
-  margin-top: -530px;
-  position: absolute;
-  background: none;
-  font-size: 17px;
 }
 
 .offer-title {

@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="paris-title">Paris</h1>
-    <img src="../../../../pictures/icons/eiffel-tower.jpeg" class="paris-detail-img" alt="">
+    <img src="../../../../pictures/icons/paris-image.jpeg" class="paris-detail-img" alt="">
     <p class="paris-subtitle">Lorem Ipsum tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet,llegg til å be.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. m tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet,llegg til å be</p>
     <div class="departure">
       <h2 class="departure-title">DEPARTURE</h2>

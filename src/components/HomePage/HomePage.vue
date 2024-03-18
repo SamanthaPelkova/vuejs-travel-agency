@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="homepage-body">
     <div class="content">
       <video autoplay muted loop id="myVideo" class="video-background">
         <source src="../../video/video-background.mp4" type="video/mp4">
@@ -44,8 +44,34 @@ export default {
 </script>
 
 <style>
+.homepage-body {
+  background-color: #0039a6;
+}
 .video-background {
   width: 100%;
+  border-bottom: 4px solid white;
+}
+.title {
+  color: white;
+  margin-top: -750px;
+  position: absolute;
+  background: none;
+  padding: 1px 30px 1px 30px;
+  border-radius: 60px;
+  text-align: center;
+  font-size: 35px;
+  margin-left: 1100px;
+}
+
+.subtitle {
+  color: white;
+  width: 23%;
+  text-align: center;
+  margin-left: 1200px;
+  margin-top: -680px;
+  position: absolute;
+  background: none;
+  font-size: 17px;
 }
 
 

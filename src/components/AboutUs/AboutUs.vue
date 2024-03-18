@@ -1,19 +1,21 @@
 <template>
-    <button class="scroll-to-top-arrow" @click="scrollTo('.logo-text')"><img src="../../pictures/icons/white-arrow.png" alt=""></button>
-  <div class="content">
-    <h2 class="about-us-title">Read here about us :)</h2>
-    <h2 class="offer-subtitle"> {{aboutUsSubtitle}} </h2>
-    <button @click="scrollTo('.jq--about-us')" class="btn-read-more">Show more</button>
-    <div class="travel-offers" v-for="offer in offers" :key="offer.id">
-      <h3 class="offers-title jq--about-us">{{ offer.title }}</h3>
-      <img :src="offer.image" class="offer-image" alt="">
-      <p class="offer-price">{{ offer.price }}</p>
-      <p class="offer-description">{{ offer.description }}</p>
+  <div class="about-us-body">
+      <button class="scroll-to-top-arrow" @click="scrollTo('.logo-text')"><img src="../../pictures/icons/white-arrow.png" alt=""></button>
+    <div class="content">
+      <h2 class="about-us-title">Read here about us :)</h2>
+      <h2 class="offer-subtitle"> {{aboutUsSubtitle}} </h2>
+      <button @click="scrollTo('.jq--about-us')" class="btn-read-more">Show more</button>
+      <div class="travel-offers" v-for="offer in offers" :key="offer.id">
+        <h3 class="offers-title jq--about-us">{{ offer.title }}</h3>
+        <img :src="offer.image" class="offer-image" alt="">
+        <p class="offer-price">{{ offer.price }}</p>
+        <p class="offer-description">{{ offer.description }}</p>
+      </div>
     </div>
+    <footer>
+      © 2024 TravelAgency. All rights reserved.
+    </footer>
   </div>
-  <footer>
-    © 2024 TravelAgency. All rights reserved.
-  </footer>
 </template>
 
 <script>
@@ -75,6 +77,9 @@ export default {
 </script>
 
 <style>
+.about-us-body {
+  background-color: #0039a6;
+}
 .travel-offers {
   display: flex;
   justify-content: center;
