@@ -11,6 +11,9 @@
       <a class="button-homepage-read-more" @click="scrollTo('.home-page-customs-title')">Zjistit více</a>
     </div>
     <HomePageCustoms/>
+    <footer>
+      © 2024 TravelAgency. All rights reserved.
+    </footer>
   </div>
 </template>
 

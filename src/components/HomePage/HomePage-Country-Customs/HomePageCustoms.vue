@@ -2,8 +2,8 @@
   <div class="home-page-customs-body">
     <h1 class="home-page-customs-title">Zvyky v zahraničí</h1>
     <CustomsSpain/>
-    <CustomsFrance/>
     <CustomsAustria/>
+    <CustomsFrance/>
   </div>
 </template>
 
