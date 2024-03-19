@@ -6,9 +6,9 @@
         <img :src="product.image" class="product-image" alt="">
         <p class="product-description">{{ product.description }}</p>
         <div class="product-quantity">
-          <button @click="decreaseQuantity" class="button-decrease-increase">-</button>
+          <button @click="decreaseQuantity" class="button-decrease-increase minus">-</button>
           <input v-model="quantity" min="1" class="product-input-quantity">
-          <button @click="increaseQuantity" class="button-decrease-increase">+</button>
+          <button @click="increaseQuantity" class="button-decrease-increase plus">+</button>
           <button class="add-to-basket">{{ addToBasketTitle }}</button>
         </div>
       </div>
@@ -104,26 +104,41 @@ export default {
 }
 
 .product-description {
-  background-color: #2ca3b9;
+  background-color: #0047AB;
+  color: white;
   padding: 30px;
   border-radius: 20px;
   font-size: 18px;
-  margin-bottom: 40px;
+  margin: 20px;
 }
 
-.button-decrease-increase {
+.minus {
   padding: 20px;
+  width: 30%;
   font-size: 20px;
-  border: 2px solid #227c8d;
+  border: 2px solid white;
   border-radius: 10px;
-  background-color: #2ea5bb;
-  margin: 10px;
+  background-color: #0047AB;
   font-weight: bold;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.plus {
+  padding: 20px;
+  width: 30%;
+  font-size: 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: #0047AB;
+  font-weight: bold;
+  margin: 10px;
   cursor: pointer;
 }
 .product-input-quantity {
   padding: 20px;
-  width: 18%;
+  width: 28%;
   font-size: 20px;
   border: 2px solid #227c8d;
   background-color: white;
