@@ -18,8 +18,6 @@
 </template>
 
 <script>
-
-
 import {ref} from "vue";
 import FreeTickets from "@/components/HomePage/FreeTickets/FreeTickets.vue";
 import {useScroll} from "@/script";
