@@ -1,9 +1,9 @@
 <template>
   <div class="home-page-customs-body">
     <h1 class="home-page-customs-title">Zvyky v zahraničí</h1>
+    <CustomsSpain/>
     <CustomsFrance/>
     <CustomsAustria/>
-    <CustomsSpain/>
   </div>
 </template>
 
@@ -34,14 +34,20 @@ export default {
 
 
 <style>
-.home-page-customs-body {
-  margin-top: 320px;
-  width: 100%;
-}
 
+.home-page-customs-body {
+  margin-top: 240px;
+  z-index: 1;
+  width: 100%;
+  padding-top: 70px;
+}
 .home-page-customs-title {
+  background: linear-gradient(to bottom, #bdd2ff, #0047AB);
   text-align: center;
   color: white;
+  margin-top: -30px;
+  padding-top: 30px;
+  padding-bottom: 50px;
   font-size: 55px;
 }
 
