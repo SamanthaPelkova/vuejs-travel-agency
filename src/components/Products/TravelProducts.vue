@@ -1,16 +1,17 @@
 <template>
   <div class="content">
     <h2 class="travel-products-title"> {{ travelProductsTitle }} </h2>
-    <h2 class="travel-products-subtitle"> {{ travelProductsSubtitle }} </h2>
+    <div class="content-tickets">
+      <h2 class="travel-products-subtitle">Zapomeňte na rutinní cestování a otevřete dveře do světa plného možností a vzrušení. S našimi skvělými letenkami do nejžádanějších destinací nabízíme klíč k objevování úchvatných míst po celém světě. Od malebných pláží a tajemných džunglí po pulzující městské metropole a historické památky, naše letenky vás zavedou tam, kde se splní vaše největší sny o cestování. S naší širokou nabídkou destinací a flexibilními možnostmi letů si můžete vybrat tu pravou cestu pro vás a zažít dobrodružství, které si budete pamatovat po celý život. Nechte naše letenky být klíčem k vašemu dalšímu úžasnému dobrodružství a zažijte svět plný zázraků a nekonečných možností.</h2>
       <div class="products">
         <product-item
-        v-for="product in travelProducts"
-        :key="product.id"
-        :product="product"
-        class="product-item"
+          v-for="product in travelProducts"
+          :key="product.id"
+          :product="product"
+          class="product-item"
         />
       </div>
-    <button class="scroll-to-top-arrow" @click="scrollTo('.logo-text')"><img src="../../pictures/icons/white-arrow.png" alt=""></button>
+    </div>
   </div>
 </template>
 
@@ -21,7 +22,7 @@ import data from "@/data";
 import ProductItem from "@/components/Products/ProductItem.vue";
 
 export default {
-  components: {ProductItem},
+  components: { ProductItem },
 
   setup() {
     const products = ref(data)
@@ -40,7 +41,6 @@ export default {
 
     const travelProductsTitle = ref('Products we offer')
     const addToBasketTitle = ref('Add to basket')
-    const travelProductsSubtitle = ref('Lorem Ipsum tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet,llegg til å be.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. m tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet,llegg til å be')
 
 
     return {
@@ -50,8 +50,7 @@ export default {
       decreaseQuantity,
       increaseQuantity,
       travelProductsTitle,
-      addToBasketTitle,
-      travelProductsSubtitle
+      addToBasketTitle
     }
   }
 }
@@ -59,24 +58,31 @@ export default {
 </script>
 
 <style>
+.content-tickets {
+  position: absolute;
+  margin-top: 150px;
+  background: linear-gradient(to top, #006aff, #0047AB);
+
+}
 .travel-products-title {
-  background-color: white;
-  padding: 50px;
-  width: 55%;
-  text-align: center;
-  margin-left: 10px;
-  margin-top: 90px;
-  font-size: 60px;
-  color: #3ACBE8;
-  border-radius: 70px 5px 70px 5px;
+  background-color: #0047AB;
+  position: absolute;
+  z-index: 300;
+  padding: 10px;
+  width: 40%;
+  margin-top: 10px;
+  margin-left: 158px;
+  //margin-top: -50px;
+  font-size: 50px;
+  color: white;
 }
 
 .travel-products-subtitle {
   color: white;
-  margin-top: 40px;
-  margin-left: 20px;
-  width: 100%;
-  text-align: center;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-bottom: 180px;
+  width: 70%;
 }
 
 .products {

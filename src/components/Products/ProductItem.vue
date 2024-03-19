@@ -66,8 +66,9 @@ export default {
 
 <style>
 .travel-product {
-  background-color: white;
+  background: linear-gradient(to bottom, #006aff, #0047AB);
   display: flex;
+  border-radius: 60px;
   margin: 20px;
 }
 
@@ -80,21 +81,23 @@ export default {
 
 .product-title {
   margin-left: 40px;
-  background-color: #2faec5;
+  margin-top: 20px;
+  background-color: rgba(0, 71, 171, 0.74);
   border-radius: 50px 20px;
   color: white;
   padding: 12px 40px;
-  font-size: 40px;
+  font-size: 35px;
+  width: 70%;
 }
 
 .product-price {
   font-size: 30px;
-  background-color: #227c8d;
-  width: 8%;
+  background-color: #172c64;
+  width: 10%;
   text-align: center;
   position: absolute;
-  margin-left: 250px;
-  margin-top: -30px;
+  margin-left: 190px;
+  margin-top: 10px;
   border-radius: 100px;
   padding: 10px;
   color: white;

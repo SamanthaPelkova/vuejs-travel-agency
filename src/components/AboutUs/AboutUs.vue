@@ -1,7 +1,6 @@
 <template>
   <div class="about-us-body">
     <img alt="#" src="../../pictures/icons/airplane-about-us.png" class="about-us-image">
-      <button class="scroll-to-top-arrow" @click="scrollTo('.logo-text')"><img src="../../pictures/icons/white-arrow.png" alt=""/></button>
     <div class="content">
       <h2 class="about-us-title">Služby které nabízíme :)</h2>
       <h2 class="offer-subtitle">Vítejte v naší nabídce služeb, které jsou navrženy tak, aby vaše cestování bylo ještě pohodlnější a příjemnější. Plánujete dovolenou plnou dobrodružství nebo podnikáte pracovní cestu do nové destinace? Chcete si užít klidný a bezstarostný pobyt, aniž byste se museli trápit organizací detailů? S naší širokou škálou služeb se nemusíte starat o drobnosti. Od zajištění parkovacího místa až po pronájem vozidla, jsme tu, abychom usnadnili každý krok vaší cestovní přípravy. Naše cílem je zajistit, abyste si své cestování plně užili, bez ohledu na to, zda jste na dovolené se svou rodinou, nebo podnikáte obchodní cestu.</h2>
@@ -77,8 +76,9 @@ export default {
 
 <style>
 .about-us-body {
-  //background-color: #0047AB;
   background: linear-gradient(to left, #172c64, #0047AB);
+  position: absolute;
+
 }
 
 .travel-offers {
@@ -178,23 +178,6 @@ export default {
   font-size: 30px;
   padding: 10px;
   cursor: pointer;
-}
-
-.scroll-to-top-arrow {
-  background: none;
-  border: none;
-}
-
-.scroll-to-top-arrow img{
-  position: absolute;
-  background: #227c8d;
-  width: 5%;
-  border-radius: 70px;
-  box-shadow: 2px 2px 40px #172c64;
-  cursor: pointer;
-  margin-top: 40px;
-  transform: rotate(-0.75turn);
-  margin-left: 1750px;
 }
 
 .offer-subtitle {
