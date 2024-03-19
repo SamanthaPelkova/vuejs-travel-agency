@@ -3,13 +3,11 @@
     <h1 class="spain-title">Španělsko</h1>
     <img src="../../../../pictures/icons/spain-cathedral-image.jpeg" class="spain-detail-img" alt="">
     <p class="spain-subtitle">Lorem Ipsum tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet,llegg til å be.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. m tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet,llegg til å be</p>
-    <div class="departure">
-      <div class="jj">
+    <div class="departure-spain">
         <h2 class="departure-title">ODLET</h2>
         <h3 class="departure-date">Den: 20/February/2024</h3>
         <h3 class="departure-time">Čas: 7:30 SEČ</h3>
         <p class="departure-price">Cena: 399CZK</p>
-      </div>
     </div>
     <div class="buttons-spain">
       <button @click="decreaseQuantity" class="button-decrease-increase-spain minus">-</button>
@@ -179,13 +177,13 @@ body {
   font-weight: bold;
 }
 
-.departure .jj {
-  width: 120%;
+.departure-spain {
+  width: 24%;
   text-align: center;
   font-size: 20px;
   position: absolute;
-  margin-top: 220px;
-  margin-left: 70px;
+  margin-top: 10px;
+  margin-left: 1250px;
   color: white;
 }
 
