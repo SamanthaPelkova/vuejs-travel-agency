@@ -4,7 +4,7 @@
       <h1 class="logo-text">Procestuj svět s LOOD</h1>
         <nav id="desktop-nav">
           <ul class="nav-links">
-            <li @click="scrollTo('.about-us-title')">
+            <li>
               <router-link to="/aboutUs">O nás</router-link>
             </li>
             <li @click="scrollTo('.offer')">

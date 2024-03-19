@@ -77,12 +77,6 @@ export default {
   border-radius: 70px 5px 70px 5px;
 }
 
-.offer-subtitle {
-  font-size: 20px;
-  margin-left: 15px;
-  margin-top: 20px;
-}
-
 .travel-services{
   width: 60%;
   display: flex;
