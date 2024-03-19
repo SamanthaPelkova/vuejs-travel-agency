@@ -5,19 +5,19 @@
         <nav id="desktop-nav">
           <ul class="nav-links">
             <li @click="scrollTo('.about-us-title')">
-              <router-link to="/aboutUs">About us</router-link>
+              <router-link to="/aboutUs">O nás</router-link>
             </li>
             <li @click="scrollTo('.offer')">
-              <router-link to="/travelServices">Services</router-link>
+              <router-link to="/travelServices">Služby</router-link>
             </li>
             <li @click="scrollTo('.notes-class')">
-              <router-link to="/notesWishlist">Notes</router-link>
+              <router-link to="/notesWishlist">Poznámky</router-link>
             </li>
             <li @click="scrollTo('.content')">
-              <router-link to="travelProducts">Products</router-link>
+              <router-link to="travelProducts">Letenky</router-link>
             </li>
             <li @click="scrollTo('.contact-info')">
-              <router-link to="/contactInfo">Contact</router-link>
+              <router-link to="/contactInfo">Kontakt</router-link>
             </li>
           </ul>
           <ul>
