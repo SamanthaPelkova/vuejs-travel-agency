@@ -83,13 +83,13 @@ export default {
 
 <style>
 body {
-  background-color: #0039a6;
+  background-color: #0047AB;
 }
 
 .spain-title {
   width: 40%;
   padding-left: 30px;
-  background-color: #0039a6;
+  background-color: #0047AB;
   font-size: 50px;
   color: white;
   position: absolute;
@@ -112,7 +112,7 @@ body {
   margin-left: 800px;
   padding: 40px;
   text-align: center;
-  background-color: #172c64;
+  background-color: #0039a6;
   border-radius: 30px 1px 1px 30px;
 }
 
@@ -126,7 +126,7 @@ body {
 .button-decrease-increase-spain {
   padding: 20px 50px;
   font-size: 20px;
-  border: 2px solid #172c64;
+  border: 2px solid #0039a6;
   background-color: white;
   font-weight: bold;
   cursor: pointer;
@@ -143,10 +143,10 @@ body {
 .product-input-quantity-spain {
   padding: 20px;
   width: 20%;
-  border-top: 1px solid #172c64;
+  border-top: 1px solid #0039a6;
   border-left: none;
   border-right: none;
-  border-bottom: 1px solid #172c64;
+  border-bottom: 1px solid #0039a6;
   font-size: 20px;
   background-color: rgba(255, 255, 255, 0.82);
   text-align: center;
@@ -158,7 +158,7 @@ body {
   padding: 20px;
   font-size: 20px;
   color: white;
-  border: 2px solid #172c64;
+  border: 2px solid #0039a6;
   border-radius: 30px;
   position: absolute;
   margin-left: 30px;
@@ -170,12 +170,12 @@ body {
 .add-to-basket-spain {animation: pulse 2s infinite}
 @keyframes pulse {
   0%, 100% {transform: scale(1)}
-  50% {transform: scale(1.05); background-color: white; color: #172c64}
+  50% {transform: scale(1.05); background-color: white; color: #0039a6}
 }
 
 .add-to-basket-spain:hover {
   background-color: white;
-  color: #172c64;
+  color: #0039a6;
   font-weight: bold;
 }
 
@@ -197,17 +197,17 @@ body {
 }
 
 .departure .departure-time {
-  background-color: #0147c4;
+  background-color: #0039a6;
   padding: 10px;
 }
 
 .departure .departure-date {
-  background-color: #0147c4;
+  background-color: #0039a6;
   padding: 10px;
 }
 
 .departure .departure-price {
-  background-color: #172c64;
+  background-color: #0039a6;
   border-radius: 1px 1px 50px 50px;
   padding: 15px;
 }
@@ -216,7 +216,7 @@ body {
   float: right;
   margin-right: 465px;
   margin-top: 10px;
-  background-color: #172c64;
+  background-color: rgba(255, 0, 0, 0.31);
   color: white;
   padding: 15px;
   border-radius: 10px;
@@ -225,7 +225,7 @@ body {
 
 .remaining-time-spain-timer {
   font-size: 45px;
-  color: #0252ec;
+  color: #3ACBE8;
 }
 
 

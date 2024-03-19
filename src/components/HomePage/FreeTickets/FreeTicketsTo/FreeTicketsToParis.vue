@@ -1,19 +1,19 @@
 <template>
   <div>
-    <h1 class="paris-title">Paris</h1>
+    <h1 class="paris-title">Paříž</h1>
     <img src="../../../../pictures/icons/paris-image.jpeg" class="paris-detail-img" alt="">
     <p class="paris-subtitle">Lorem Ipsum tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet,llegg til å be.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. m tok i bruk nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet,llegg til å be</p>
     <div class="departure">
-      <h2 class="departure-title">DEPARTURE</h2>
-      <h3 class="departure-date">Date: 20/February/2024</h3>
-      <h3 class="departure-time">Time: 7:30 SEČ</h3>
-      <p class="departure-price">Price: 399CZK</p>
+      <h2 class="departure-title">ODLET</h2>
+      <h3 class="departure-date">Den: 20/February/2024</h3>
+      <h3 class="departure-time">Čas: 7:30 SEČ</h3>
+      <p class="departure-price">Cena: 399CZK</p>
     </div>
     <div class="buttons-paris">
       <button @click="decreaseQuantity" class="button-decrease-increase-paris minus">-</button>
       <input v-model="quantity" min="1" class="product-input-quantity-paris">
       <button @click="increaseQuantity" class="button-decrease-increase-paris plus">+</button>
-      <button class="add-to-basket-paris">Add to basket</button>
+      <button class="add-to-basket-paris">Přidat do košíku</button>
     </div>
   </div>
 </template>
@@ -54,11 +54,15 @@ export default {
 
 <style>
 .paris-title {
-  background-color: white;
-  padding: 30px 120px;
-  font-size: 60px;
-  color: #3ACBE8;
-  margin-top: 30px;
+  width: 40%;
+  padding-left: 30px;
+  background-color: #0039a6;
+  font-size: 50px;
+  color: white;
+  position: absolute;
+  z-index: 300;
+  margin-left: 138px;
+  margin-top: 20px;
 }
 
 .paris-detail-img {
