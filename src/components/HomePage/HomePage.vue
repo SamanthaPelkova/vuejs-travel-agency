@@ -4,11 +4,13 @@
       <video autoplay muted loop id="myVideo" class="video-background">
         <source src="../../video/video-background.mp4" type="video/mp4">
       </video>
-      <h3 class="title">{{ title }}</h3>
+      <h3 class="title">Vítejte na našich stránkách!</h3>
       <p class="subtitle">{{ subtitle }}</p>
       <FreeTickets/>
-      <a class="button-homepage-read-more">Zjistit více</a>
+      <h2 class="home-page-title-other-countries">Zajímá vás jaké jsou zvyky v jiných zemích?</h2>
+      <a class="button-homepage-read-more" @click="scrollTo('.home-page-customs-title')">Zjistit více</a>
     </div>
+    <HomePageCustoms/>
   </div>
 </template>
 
@@ -18,19 +20,16 @@
 import {ref} from "vue";
 import FreeTickets from "@/components/HomePage/FreeTickets/FreeTickets.vue";
 import {useScroll} from "@/script";
+import HomePageCustoms from "@/components/HomePage/HomePage-Country-Customs/HomePageCustoms.vue";
 
 export default {
-  components: { FreeTickets },
-
-
+  components: {HomePageCustoms, FreeTickets },
   setup() {
-    const title = ref('Vítejte na našich stránkách!')
     const subtitle = ref('Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem I ek nettopp Lorem Ipsum for dummytekst.Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet,llegg til å be')
     const { scrollTo } = useScroll()
 
 
     return {
-      title,
       subtitle,
       scrollTo
     }
@@ -87,6 +86,13 @@ body {
   color: white;
   font-size: 30px;
   cursor: pointer;
+}
+
+.home-page-title-other-countries {
+  color: white;
+  margin-left: 1070px;
+  position: absolute;
+  font-size: 30px;
 }
 
 
