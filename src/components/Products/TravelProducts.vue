@@ -6,6 +6,7 @@
       <h2 class="travel-products-subtitle">Zapomeňte na rutinní cestování a otevřete dveře do světa plného možností a vzrušení. S našimi skvělými letenkami do nejžádanějších destinací nabízíme klíč k objevování úchvatných míst po celém světě. Od malebných pláží a tajemných džunglí po pulzující městské metropole a historické památky, naše letenky vás zavedou tam, kde se splní vaše největší sny o cestování. S naší širokou nabídkou destinací a flexibilními možnostmi letů si můžete vybrat tu pravou cestu pro vás a zažít dobrodružství, které si budete pamatovat po celý život. Nechte naše letenky být klíčem k vašemu dalšímu úžasnému dobrodružství a zažijte svět plný zázraků a nekonečných možností.</h2>
       <h3 class="travel-tickets-offer">Letenky, které nabízíme k zakoupení: </h3>
       <div class="products">
+        <h1 v-if="filteredItems.length === 0" class="alert-no-tickets-available">Omlouváme se, ale momentálně není k dispozici žádná volná letenka dle vašeho vyhledávání.</h1>
         <ProductItem
           v-for="product in filteredItems"
           :key="product.id"
@@ -18,7 +19,7 @@
 </template>
 
 <script>
-import {computed, ref} from "vue";
+import {computed, onMounted, ref} from "vue";
 import { useScroll } from "@/script";
 import data from "@/data";
 import ProductItem from "@/components/Products/ProductItem.vue";
@@ -46,11 +47,18 @@ export default {
     const addToBasketTitle = ref('Add to basket')
 
     const filteredItems = computed(() => {
-      return products.value.filter(ticket =>
-          ticket.title.toLowerCase().includes(searchQuery.value.toLowerCase())
-      )
+      return products.value.filter(ticket => ticket.title.toLowerCase().includes(searchQuery.value.toLowerCase()))
     })
 
+    onMounted(() => {
+      if (filteredItems.value.length === 0) {
+        return
+      }
+    })
+
+
+
+    console.log(filteredItems)
 
     return {
       travelProducts: products,
@@ -126,6 +134,16 @@ export default {
   border: none;
   text-align: center;
   box-shadow: 3px 3px 30px 3px white;
+}
+
+.alert-no-tickets-available {
+  color: white;
+  margin-top: 40px;
+  margin-bottom: 160px;
+  margin-left: -90px;
+  background-color: #172c64;
+  border-radius: 60px;
+  padding: 20px;
 }
 
 </style>
