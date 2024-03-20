@@ -13,35 +13,35 @@ const travelProducts = [
     {
         id: 1,
         title: 'Egypt',
-        description:'Objevte starověké památky v Gíze a Luxoru, potom si dopřejte odpočinek na pláži u Rudého moře. S našimi průvodci a komfortním ubytováním se vaše dobrodružství stane nezapomenutelným!',
+        description:'Objevte starověké památky v Gíze a Luxoru, potom si dopřejte odpočinek na pláži u Rudého moře. S našimi průvodci se vaše dobrodružství stane nezapomenutelným!',
         price: '1 299 Kč',
         image: image1
     },
     {
         id: 2,
         title: 'Santorini',
-        description:'Santorini láká svými malebnými uličkami, úchvatnými západy slunce a tradiční řeckou kuchyní. Prožijte nezapomenutelnou dovolenou plnou krásy a romantiky na tomto úchvatném ostrově v Egejském moři.',
+        description:'Santorini láká svými malebnými uličkami. Prožijte nezapomenutelnou dovolenou plnou krásy a romantiky na tomto úchvatném ostrově v Egejském moři.',
         price: '3 990 Kč',
         image: image2
     },
     {
         id: 3,
         title: 'Dubaj',
-        description:'Jeho ikonické mrakodrapy, rozlehlé nákupní centra a exkluzivní pláže lákají návštěvníky z celého světa. Zažijte kontrast mezi modernitou a arabskou kulturou na jednom místě.',
+        description:'Jeho ikonické mrakodrapy, rozlehlé nákupní centra a exkluzivní pláže lákají návštěvníky z celého světa. Zažijte kontrast modernity a kreativity.',
         price: '6 990 Kč',
         image: image3
     },
     {
         id: 4,
         title: 'Milán',
-        description:'Proslulé módní domy, historické památky a živé uliční kavárny tvoří neodolatelný šarm tohoto italského města. Prožijte atmosféru kreativity a elegance, která je v Miláně všudypřítomná.',
+        description:'Proslulé módní domy, historické památky a živé uliční kavárny tvoří neodolatelný šarm tohoto italského města. Prožijte atmosféru elegance, která je v Miláně všudypřítomná.',
         price: '2 199 Kč',
         image: image4
     },
     {
         id: 4,
         title: 'Itálie',
-        description: 'Itálie okouzluje svou kulinářskou rozmanitostí, uměním a architekturou. Od památek antické Říma po romantická města jako Florencie a Benátky, Itálie láká svým bohatstvím historie a krásy.',
+        description: 'Itálie okouzluje svým uměním. Od památek antické Říma po romantická města jako Florencie a Benátky, Itálie láká svým bohatstvím historie a krásy.',
         price: '1 290 Kč',
         image: image5
     },
@@ -55,14 +55,14 @@ const travelProducts = [
     {
         id: 4,
         title: 'Korfu',
-        description: 'Užijte si slunečné pláže, tyrkysové moře a historické památky na Korfu. Prozkoumejte malebná městečka, ochutnejte tradiční řeckou kuchyni a nechte se unášet relaxační atmosférou této krásné jónské ostrovní destinace.',
+        description: 'Užijte si slunečné pláže, tyrkysové moře a historické památky na Korfu. Ostrov s tyrkysovými mořskými zálivy a olivovými háji. ',
         price: '2 590 Kč',
         image: image7
     },
     {
         id: 4,
         title: 'New York',
-        description: 'Prožijte pulzující atmosféru New Yorku s jeho ikonickými mrakodrapy, kulinářskými zážitky a nekonečnými možnostmi zábavy a objevování. Každý roh této fascinující metropole nabízí nový příběh a dobrodružství.',
+        description: 'Prožijte pulzující atmosféru New Yorku s jeho ikonickými mrakodrapy, kulinářskými zážitky a nekonečnými možnostmi zábavy a objevování..',
         price: '1 990 Kč',
         image: image8
     }

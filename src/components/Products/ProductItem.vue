@@ -110,6 +110,7 @@ export default {
   border-radius: 20px;
   font-size: 18px;
   margin: 20px;
+  text-align: center;
 }
 
 .minus {
@@ -140,7 +141,7 @@ export default {
   padding: 20px;
   width: 28%;
   font-size: 20px;
-  border: 2px solid #227c8d;
+  border: 2px solid #172c64;
   background-color: white;
   border-radius: 10px;
   text-align: center;
@@ -148,20 +149,21 @@ export default {
 }
 
 .add-to-basket {
-  width: 40%;
+  width: 80%;
   padding: 20px;
   font-size: 15px;
-  margin-left: 20px;
-  color: white;
-  border: 2px solid #227c8d;
+  margin-left: 40px;
+  margin-bottom: 30px;
+  color: #0047AB;
+  border: 2px solid #172c64;
   border-radius: 30px;
   cursor: pointer;
   font-weight: bold;
   transition: 0.5s;
 }
 .add-to-basket:hover {
-  background-color: white;
+  background-color: #006aff;
+  color: white;
   font-weight: bold;
-  color: #15515d;
 }
 </style>
