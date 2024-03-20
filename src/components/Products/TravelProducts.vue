@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import {computed, onMounted, ref} from "vue";
+import { computed, ref } from "vue";
 import { useScroll } from "@/script";
 import data from "@/data";
 import ProductItem from "@/components/Products/ProductItem.vue";
@@ -56,12 +56,6 @@ export default {
 
     const filteredItems = computed(() => {
       return products.value.filter(ticket => ticket.title.toLowerCase().includes(searchQuery.value.toLowerCase()))
-    })
-
-    onMounted(() => {
-      if (filteredItems.value.length === 0) {
-        return
-      }
     })
 
 
@@ -165,14 +159,12 @@ export default {
   font-size: 23px;
   background-color: white;
   box-shadow: 3px 10px 30px 1px rgba(255, 255, 255, 0.68);
-  border-radius: 1px 40px 40px 1px;
-  margin-left: -20px;
   padding-left: 20px;
-  width: 35%;
+  width: 100%;
 }
 
 .sorting-tickets li {
-  margin-left: 15px;
+  margin-left: 155px;
   margin-top: 10px;
   margin-bottom: 10px;
   list-style: none;
