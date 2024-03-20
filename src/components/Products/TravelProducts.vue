@@ -5,6 +5,14 @@
     <div class="content-tickets">
       <h2 class="travel-products-subtitle">Zapomeňte na rutinní cestování a otevřete dveře do světa plného možností a vzrušení. S našimi skvělými letenkami do nejžádanějších destinací nabízíme klíč k objevování úchvatných míst po celém světě. Od malebných pláží a tajemných džunglí po pulzující městské metropole a historické památky, naše letenky vás zavedou tam, kde se splní vaše největší sny o cestování. S naší širokou nabídkou destinací a flexibilními možnostmi letů si můžete vybrat tu pravou cestu pro vás a zažít dobrodružství, které si budete pamatovat po celý život. Nechte naše letenky být klíčem k vašemu dalšímu úžasnému dobrodružství a zažijte svět plný zázraků a nekonečných možností.</h2>
       <h3 class="travel-tickets-offer">Letenky, které nabízíme k zakoupení: </h3>
+      <nav>
+        <ul class="sorting-tickets">
+          <li>Nejnižší cena</li>
+          <li>Nejvyšší cena</li>
+          <li>prdel</li>
+          <li>prdel</li>
+        </ul>
+      </nav>
       <div class="products">
         <h1 v-if="filteredItems.length === 0" class="alert-no-tickets-available">Omlouváme se, ale momentálně není k dispozici žádná volná letenka dle vašeho vyhledávání.</h1>
         <ProductItem
@@ -143,12 +151,32 @@ export default {
 
 .alert-no-tickets-available {
   color: white;
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 160px;
-  margin-left: -90px;
-  background-color: #172c64;
+  margin-left: -180px;
   border-radius: 60px;
   padding: 20px;
+}
+
+.sorting-tickets {
+  display: flex;
+  color: #172c64;
+  font-weight: bold;
+  font-size: 23px;
+  background-color: white;
+  box-shadow: 3px 10px 30px 1px rgba(255, 255, 255, 0.68);
+  border-radius: 1px 40px 40px 1px;
+  margin-left: -20px;
+  padding-left: 20px;
+  width: 35%;
+}
+
+.sorting-tickets li {
+  margin-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  list-style: none;
+  cursor: pointer;
 }
 
 </style>
