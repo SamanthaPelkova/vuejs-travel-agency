@@ -82,6 +82,18 @@ export default {
       })
     }
 
+    const sortByBestSeller = () => {
+      products.value.sort((a, b) => {
+        if (a.bestSeller > b.bestSeller) {
+          return 1
+        }
+        if (a.bestSeller === b.bestSeller) {
+          return 0
+        }
+        return -1
+      })
+    }
+
     return {
       travelProducts: products,
       scrollTo,
@@ -93,7 +105,8 @@ export default {
       filteredItems,
       searchQuery,
       sortByPriceLowToHigh,
-      sortByPriceHighToLow
+      sortByPriceHighToLow,
+      sortByBestSeller
     }
   }
 }
