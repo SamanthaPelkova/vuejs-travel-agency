@@ -173,6 +173,7 @@ export default {
   padding: 20px 20px 20px 110px;
   border-radius: 1px 40px 40px 1px;
   margin-left: -90px;
+  margin-top: -150px;
   background-color: #0039a6;
   box-shadow: 3px 3px 30px 3px #172c64;
   width: 50%;
