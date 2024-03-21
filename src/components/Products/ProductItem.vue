@@ -2,7 +2,9 @@
     <div class="travel-product">
       <div>
         <h3 class="product-title jq--about-us">{{ product.title }}</h3>
-        <h2 class="product-price">{{ product.price }}</h2>
+        <h2 class="product-price">
+          {{vueNumberFormat(product.price)}}
+        </h2>
         <img :src="product.image" class="product-image" alt="">
         <p class="product-description">{{ product.description }}</p>
         <div class="product-quantity">

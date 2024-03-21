@@ -7,10 +7,10 @@
       <h3 class="travel-tickets-offer">Letenky, které nabízíme k zakoupení: </h3>
       <nav>
         <ul class="sorting-tickets">
-          <li>Nejnižší cena</li>
-          <li>Nejvyšší cena</li>
-          <li>prdel</li>
-          <li>prdel</li>
+          <li @click="sortByPriceLowToHigh">Nejnižší cena</li>
+          <li @click="sortByPriceHighToLow">Nejvyšší cena</li>
+          <li @click="sortByBestSeller">Nejprodávanější</li>
+          <li>TOP Nabídky</li>
         </ul>
       </nav>
       <div class="products">
@@ -27,10 +27,10 @@
 </template>
 
 <script>
-import { computed, ref } from "vue";
-import { useScroll } from "@/script";
-import data from "@/data";
-import ProductItem from "@/components/Products/ProductItem.vue";
+import { computed, ref } from "vue"
+import { useScroll } from "@/script"
+import data from "@/data"
+import ProductItem from "@/components/Products/ProductItem.vue"
 
 export default {
   components: { ProductItem },
@@ -58,9 +58,29 @@ export default {
       return products.value.filter(ticket => ticket.title.toLowerCase().includes(searchQuery.value.toLowerCase()))
     })
 
+    const sortByPriceLowToHigh = () => {
+      products.value.sort((a, b) => {
+        if (a.price > b.price){
+          return 1
+        }
+        if (a.price === b.price){
+          return 0
+        }
+        return -1
+      })
+    }
 
-
-    console.log(filteredItems)
+    const sortByPriceHighToLow = () => {
+      products.value.sort((a, b) => {
+        if (a.price < b.price) {
+          return 1
+        }
+        if (a.price === b.price) {
+          return 0
+        }
+        return -1
+      })
+    }
 
     return {
       travelProducts: products,
@@ -71,7 +91,9 @@ export default {
       travelProductsTitle,
       addToBasketTitle,
       filteredItems,
-      searchQuery
+      searchQuery,
+      sortByPriceLowToHigh,
+      sortByPriceHighToLow
     }
   }
 }
