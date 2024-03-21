@@ -16,6 +16,7 @@ const travelProducts = [
         description:'Objevte starověké památky v Gíze a Luxoru, potom si dopřejte odpočinek na pláži u Rudého moře. S našimi průvodci se vaše dobrodružství stane nezapomenutelným!',
         price: 1299,
         bestSeller: 6,
+        topOffer: 2,
         image: image1
     },
     {
@@ -24,6 +25,7 @@ const travelProducts = [
         description:'Santorini láká svými malebnými uličkami. Prožijte nezapomenutelnou dovolenou plnou krásy a romantiky na tomto úchvatném ostrově v Egejském moři.',
         price: 3990,
         bestSeller: 8,
+        topOffer: null,
         image: image2
     },
     {
@@ -32,6 +34,7 @@ const travelProducts = [
         description:'Jeho ikonické mrakodrapy, rozlehlé nákupní centra a exkluzivní pláže lákají návštěvníky z celého světa. Zažijte kontrast modernity a kreativity.',
         price: 6990,
         bestSeller: 7,
+        topOffer: 4,
         image: image3
     },
     {
@@ -40,6 +43,7 @@ const travelProducts = [
         description:'Proslulé módní domy, historické památky a živé uliční kavárny tvoří neodolatelný šarm tohoto italského města. Prožijte atmosféru elegance, která je v Miláně všudypřítomná.',
         price: 2199,
         bestSeller: 3,
+        topOffer: null,
         image: image4
     },
     {
@@ -48,6 +52,7 @@ const travelProducts = [
         description: 'Itálie okouzluje svým uměním. Od památek antické Říma po romantická města jako Florencie a Benátky, Itálie láká svým bohatstvím historie a krásy.',
         price: 1290,
         bestSeller: 4,
+        topOffer: null,
         image: image5
     },
     {
@@ -56,6 +61,7 @@ const travelProducts = [
         description: 'Rakousko kombinuje alpskou krásu, historické města a bohatou kulturu, přinášející nezapomenutelné dobrodružství v srdci Evropy.',
         price: 590,
         bestSeller: 2,
+        topOffer: null,
         image: image6
     },
     {
@@ -64,6 +70,7 @@ const travelProducts = [
         description: 'Užijte si slunečné pláže, tyrkysové moře a historické památky na Korfu. Ostrov s tyrkysovými mořskými zálivy a olivovými háji. ',
         price: 2590,
         bestSeller: 5,
+        topOffer: 3,
         image: image7
     },
     {
@@ -72,6 +79,7 @@ const travelProducts = [
         description: 'Prožijte pulzující atmosféru New Yorku s jeho ikonickými mrakodrapy, kulinářskými zážitky a nekonečnými možnostmi zábavy a objevování..',
         price: 1990,
         bestSeller: 1,
+        topOffer: 1,
         image: image8
     }
 ]

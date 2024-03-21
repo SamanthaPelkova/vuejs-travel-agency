@@ -10,7 +10,7 @@
           <li @click="sortByPriceLowToHigh">Nejnižší cena</li>
           <li @click="sortByPriceHighToLow">Nejvyšší cena</li>
           <li @click="sortByBestSeller">Nejprodávanější</li>
-          <li>TOP Nabídky</li>
+          <li @click="sortByTopOffer">TOP Nabídky</li>
         </ul>
       </nav>
       <div class="products">
@@ -94,6 +94,19 @@ export default {
       })
     }
 
+    const sortByTopOffer = () => {
+      products.value.sort((a, b) => {
+        if (a.topOffer > b.topOffer) {
+          return 1
+        }
+        if (a.topOffer === b.topOffer) {
+          return 0
+        }
+
+        return -1
+      })
+    }
+
     return {
       travelProducts: products,
       scrollTo,
@@ -106,7 +119,8 @@ export default {
       searchQuery,
       sortByPriceLowToHigh,
       sortByPriceHighToLow,
-      sortByBestSeller
+      sortByBestSeller,
+      sortByTopOffer
     }
   }
 }
