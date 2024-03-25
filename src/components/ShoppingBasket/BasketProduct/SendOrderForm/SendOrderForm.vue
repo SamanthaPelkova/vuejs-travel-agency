@@ -4,8 +4,8 @@
       <h1 class="title-send-order">Vyplnťe prosím formulář:</h1>
       <CustomerInfo @order-customer-info="handleCustomerInfo"/>
       <DeliveryInfo @order-delivery-info="handleDeliveryInfo" :phone="order.customerInfo.phone" />
-      <h2 class="block-pay-method">3. Platební údaje</h2>
-      <div class="paymethod-block-send-order">
+      <h2 class="block-pay-method" v-if="!order.deliveryInfo.postCode.length">3. Platební údaje</h2>
+      <div class="paymethod-block-send-order" v-if="order.deliveryInfo.postCode.length">
         <h2><strong>Platba: </strong></h2>
         <h2>Cena: {{ vueNumberFormat(price) }}</h2>
         <h3 class="label-send-order">Platební metoda:</h3>
@@ -21,8 +21,8 @@
           </option>
         </select> <br>
       </div>
-    <button type="submit" class="button-send-order-disabled">Odeslat objednávku</button>
-    <button type="submit" class="button-send-order">Odeslat objednávku</button>
+      <button type="submit" class="button-send-order-disabled" v-if="!selectedCurrency">Odeslat objednávku</button>
+      <button type="submit" class="button-send-order" v-else>Odeslat objednávku</button>
     </div>
   </form>
 </template>
@@ -74,6 +74,10 @@ export default {
       order.value.deliveryInfo = info
     }
 
+    const handlePayMethodInfo = (info) => {
+      order.value.payMethod = info
+    }
+
     const submitOrder = () => {
       const orderData = {
         customerInfo: {
@@ -98,16 +102,22 @@ export default {
       console.log(orderStore.orders)
 
       order.value = {
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        street: '',
-        city: '',
-        postCode: '',
-        price: props.price,
-        payMethod: '',
-        currency: ''
+        customerInfo: {
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: ''
+        },
+        deliveryInfo: {
+          street: '',
+          city: '',
+          postCode: ''
+        },
+        payMethod: {
+          price: props.price,
+          payMethod: '',
+          currency: ''
+        }
       }
 
       alert('Objednávka byla úspěšně odeslána!')
@@ -121,7 +131,8 @@ export default {
       order,
       submitOrder,
       handleCustomerInfo,
-      handleDeliveryInfo
+      handleDeliveryInfo,
+      handlePayMethodInfo
     }
   }
 }
