@@ -3,18 +3,9 @@
     <div class="form-send-order">
       <h1 class="title-send-order">Vyplnťe prosím formulář:</h1>
       <CustomerInfo @order-customer-info="handleCustomerInfo"/>
-      <h2 class="block-delivery-method" v-if="!order.customerInfo.phone.length">2. Doručovací údaje</h2>
-      <div class="delivery-method-block-send-order" v-if="order.customerInfo.phone.length">
-        <h3>Doručovací adresa:</h3>
-        <label for="street" class="label-send-order"><strong>Ulice: </strong></label> <br>
-        <input type="text" id="street" v-model="order.street" required> <br>
-        <label for="city" class="label-send-order"><strong>Město: </strong></label> <br>
-        <input type="text" id="city" v-model="order.city" required> <br>
-        <label for="postCode" class="label-send-order"><strong>PSČ: </strong></label> <br>
-        <input type="text" id="postCode" v-model="order.postCode" required> <br>
-      </div>
-      <h2 class="block-pay-method" v-if="!order.postCode.length">3. Platební údaje</h2>
-      <div class="paymethod-block-send-order" v-if="order.postCode.length">
+      <DeliveryInfo @order-delivery-info="handleDeliveryInfo" :phone="order.customerInfo.phone" />
+      <h2 class="block-pay-method">3. Platební údaje</h2>
+      <div class="paymethod-block-send-order">
         <h2><strong>Platba: </strong></h2>
         <h2>Cena: {{ vueNumberFormat(price) }}</h2>
         <h3 class="label-send-order">Platební metoda:</h3>
@@ -30,8 +21,8 @@
           </option>
         </select> <br>
       </div>
-    <button type="submit" class="button-send-order-disabled" v-if="!order.currency.length">Odeslat objednávku</button>
-    <button type="submit" class="button-send-order" v-if="order.currency.length">Odeslat objednávku</button>
+    <button type="submit" class="button-send-order-disabled">Odeslat objednávku</button>
+    <button type="submit" class="button-send-order">Odeslat objednávku</button>
     </div>
   </form>
 </template>
@@ -40,9 +31,10 @@
 import { ref } from 'vue'
 import { useOrderStore } from '@/orderModule'
 import CustomerInfo from "@/components/ShoppingBasket/BasketProduct/SendOrderForm/SubmitOrderForm/CustomerInfo.vue";
+import DeliveryInfo from "@/components/ShoppingBasket/BasketProduct/SendOrderForm/SubmitOrderForm/DeliveryInfo.vue";
 
 export default {
-  components: {CustomerInfo},
+  components: {DeliveryInfo, CustomerInfo},
   props: {
     price: {
       type: Number,
@@ -62,16 +54,24 @@ export default {
         email: '',
         phone: ''
       },
-      street: '',
-      city: '',
-      postCode: '',
-      price: props.price,
-      payMethod: selectedPayMethod,
-      currency: selectedCurrency
+      deliveryInfo: {
+        street: '',
+        city: '',
+        postCode: ''
+      },
+      payMethod: {
+        price: props.price,
+        selectedPayMethod: selectedPayMethod,
+        currency: selectedCurrency
+      }
     })
 
     const handleCustomerInfo = (info) => {
       order.value.customerInfo = info
+    }
+
+    const handleDeliveryInfo = (info) => {
+      order.value.deliveryInfo = info
     }
 
     const submitOrder = () => {
@@ -82,12 +82,12 @@ export default {
           email: order.value.customerInfo.email,
           phone: order.value.customerInfo.phone,
           deliveryAddress: {
-            street: order.value.street,
-            city: order.value.city,
-            postCode: order.value.postCode
+            street: order.value.deliveryInfo.street,
+            city: order.value.deliveryInfo.city,
+            postCode: order.value.deliveryInfo.postCode
           },
           payment: {
-            price: order.value.price,
+            price: order.value.payMethod.price,
             payMethod: selectedPayMethod,
             currency: selectedCurrency
           }
@@ -120,7 +120,8 @@ export default {
       payMethods,
       order,
       submitOrder,
-      handleCustomerInfo
+      handleCustomerInfo,
+      handleDeliveryInfo
     }
   }
 }

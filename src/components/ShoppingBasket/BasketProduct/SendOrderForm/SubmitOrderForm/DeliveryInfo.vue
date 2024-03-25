@@ -1,34 +1,40 @@
 <template>
   <form>
-    <label for="firstName" class="label-send-order"><strong>Jméno: </strong></label> <br>
-    <input type="text" id="firstName" v-model="customerInfo.firstName" required> <br>
-    <label for="lastName" class="label-send-order"><strong>Příjmení: </strong></label> <br>
-    <input type="text" id="lastName" v-model="customerInfo.lastName" required> <br>
-    <label for="email" class="label-send-order"><strong>Email: </strong></label> <br>
-    <input type="email" id="email" v-model="customerInfo.email" required> <br>
-    <label for="phone" class="label-send-order"><strong>Mobil: </strong></label> <br>
-    <input  id="phone" v-model="customerInfo.phone" required> <br>
+    <h2 class="block-delivery-method" v-if="!phone.length">2. Doručovací údaje</h2>
+    <div v-if="phone.length">
+      <h3>Doručovací adresa:</h3>
+      <label for="street" class="label-send-order"><strong>Ulice: </strong></label> <br>
+      <input type="text" id="street" v-model="deliveryInfo.street" required> <br>
+      <label for="city" class="label-send-order"><strong>Město: </strong></label> <br>
+      <input type="text" id="city" v-model="deliveryInfo.city" required> <br>
+      <label for="postCode" class="label-send-order"><strong>PSČ: </strong></label> <br>
+      <input type="text" id="postCode" v-model="deliveryInfo.postCode" required> <br>
+    </div>
   </form>
 </template>
 
 <script>
 
-import {ref} from "vue";
+import { ref } from "vue";
 
 export default {
-  emits:['order-customer-info'],
+  emits:['order-delivery-info'],
+  props: {
+    phone: {
+      required: true,
+    }
+  },
   setup(_,{ emit }){
-    const customerInfo = ref({
-      firstName: '',
-      lastName: '',
-      email: '',
-      phone: ''
+    const deliveryInfo = ref({
+      street: '',
+      city: '',
+      postCode: ''
     })
 
-    emit('order-customer-info', customerInfo)
+    emit('order-delivery-info', deliveryInfo)
 
     return {
-      customerInfo
+      deliveryInfo
     }
   }
 }
