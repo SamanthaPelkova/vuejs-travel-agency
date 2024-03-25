@@ -20,6 +20,7 @@
           :key="product.id"
           :product="product"
           class="product-item"
+          @add-to-basket="addToBasket(product, $event)"
         />
       </div>
     </div>
@@ -39,6 +40,7 @@ export default {
     const products = ref(data)
     const searchQuery = ref('')
     const quantity = ref(1)
+    const cartItems = ref([])
     const { scrollTo } = useScroll()
 
     const decreaseQuantity = () => {
@@ -57,6 +59,21 @@ export default {
     const filteredItems = computed(() => {
       return products.value.filter(ticket => ticket.title.toLowerCase().includes(searchQuery.value.toLowerCase()))
     })
+
+    const addToBasket = (product, quantity) => {
+      const localProduct = cartItems.value.find((p) => p.id === product.id)
+      if (localProduct) {
+        localProduct.quantity += quantity
+        return
+      }
+      const cartProduct = { ...product, quantity }
+      cartItems.value.push(cartProduct)
+    }
+
+    const removeFromBasket = (productId) => {
+      cartItems.value = products.value.filter(item => item.id !== productId)
+    }
+
 
     const sortByPriceLowToHigh = () => {
       products.value.sort((a, b) => {
@@ -120,7 +137,9 @@ export default {
       sortByPriceLowToHigh,
       sortByPriceHighToLow,
       sortByBestSeller,
-      sortByTopOffer
+      sortByTopOffer,
+      addToBasket,
+      removeFromBasket
     }
   }
 }

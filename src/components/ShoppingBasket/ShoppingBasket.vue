@@ -8,24 +8,26 @@
   <div class="shopping-basket-information">
     <h3 class="shopping-basket-subtitle number">Number</h3>
     <h3 class="shopping-basket-subtitle product">Product</h3>
-    <h3 class="shopping-basket-subtitle descr">Description</h3>
+    <h3 class="shopping-basket-subtitle describe">Description</h3>
     <h3 class="shopping-basket-subtitle ks">/ks</h3>
     <h3 class="shopping-basket-subtitle size">Size</h3>
     <h3 class="shopping-basket-subtitle price">Price</h3>
   </div>
+  <BasketProduct :filtered-items="products"/>
 </template>
 
 <script>
 
 
+import BasketProduct from "@/components/ShoppingBasket/BasketProduct/BasketProduct.vue";
+
 export default {
-
-
+  components: { BasketProduct },
   setup() {
-
+    const products = ([])
 
     return {
-
+      products
     }
   }
 }
@@ -33,11 +35,11 @@ export default {
 
 <style>
 .blue-space {
-  background: #3ACBE8;
+  background: #0047AB;
   position: absolute;
   padding: 30px;
-  color: #3ACBE8;
-  margin-top: -90px;
+  color: #0039a6;
+  margin-top: -10px;
   margin-left: 140px;
   width: 34%;
 
@@ -57,14 +59,17 @@ export default {
 
 .shopping-basket-information {
   display: flex;
+  border-radius: 1px 30px 30px 1px;
 }
 
 .shopping-basket-subtitle {
-  margin-top: 50px;
+  width: 100%;
+  margin-top: 140px;
   font-size: 25px;
-  color: #3ACBE8;
+  color: #172c64;
   padding: 10px;
   background-color: white;
+  box-shadow: 3px 3px 30px 3px white;
 }
 
 .number {
@@ -75,7 +80,7 @@ export default {
   padding-left: 30px;
 }
 
-.descr {
+.describe {
   padding-left: 40px;
 }
 
