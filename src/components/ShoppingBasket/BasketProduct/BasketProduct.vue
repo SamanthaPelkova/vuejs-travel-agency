@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="cartItems.length === 0" class="basketIsEmpty">
+    <div v-if="cartItems.length === 0" class="basket-is-empty">
       <h2>Košík je prázdný</h2>
     </div>
     <ul class="basket-products" v-if="cartItems.length">
@@ -14,12 +14,12 @@
       <h1 class="totalPriceSum">{{ vueNumberFormat(totalPrice) }}</h1>
     </div>
   </div>
-  <button class="checkout-page-btn" ><router-link to="/checkout">Pokračovat</router-link></button>
+  <button class="checkout-page-btn" v-if="cartItems.length"><router-link to="/checkout">Pokračovat</router-link></button>
 </template>
 
 <script>
 import { useCartStore } from "@/orderModule"
-import {computed} from "vue";
+import { computed } from "vue";
 
 export default {
   props: {
@@ -32,7 +32,7 @@ export default {
     const cartStore = useCartStore()
 
     const totalPrice = computed(() => {
-      let subtotalPrice = 1990
+      let subtotalPrice = 0
       cartStore.cartItems.forEach((ticket) => {
         subtotalPrice += ticket.price
       })
@@ -82,7 +82,13 @@ export default {
   margin-top: 50px;
   margin-left: 580px;
   text-decoration: none;
+}
 
+.basket-is-empty {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 30px;
 }
 
 
