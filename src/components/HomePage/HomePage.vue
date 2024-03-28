@@ -21,7 +21,7 @@
 import {ref} from "vue";
 import FreeTickets from "@/components/HomePage/FreeTickets/FreeTickets.vue";
 import {useScroll} from "@/script";
-import HomePageCustoms from "@/components/HomePage/HomePage-Country-Customs/HomePageCustoms.vue";
+import HomePageCustoms from "@/components/HomePage/HomePageCountryCustoms/HomePageCustoms.vue";
 
 export default {
   components: {HomePageCustoms, FreeTickets },

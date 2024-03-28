@@ -6,7 +6,7 @@
       <DeliveryInfo @order-delivery-info="handleDeliveryInfo" :phone="order.customerInfo.phone" />
       <h2 class="block-pay-method" v-if="!order.deliveryInfo.postCode.length">3. Platební údaje</h2>
       <div class="paymethod-block-send-order" v-if="order.deliveryInfo.postCode.length">
-        <h2><strong>Platba: </strong></h2>
+        <h2 class="send-order-paymethod-title"><strong>Platba: </strong></h2>
         <h2>Cena: {{ vueNumberFormat(price) }}</h2>
         <h3 class="label-send-order">Platební metoda:</h3>
         <select id="payMethod" v-model="selectedPayMethod">
@@ -213,8 +213,10 @@ input {
   border: 2px solid rgba(0, 0, 0, 0.44);
 }
 
-.delivery-method-block-send-order {
-
+.send-order-paymethod-title {
+  font-size: 35px;
+  color: #006aff;
+  margin-left: -25px;
 }
 
 </style>

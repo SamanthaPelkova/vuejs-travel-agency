@@ -2,7 +2,7 @@
   <form>
     <h2 class="block-delivery-method" v-if="!phone.length">2. Doručovací údaje</h2>
     <div v-if="phone.length">
-      <h3>Doručovací adresa:</h3>
+      <h3 class="send-order-delivery-title">Doručovací adresa:</h3>
       <label for="street" class="label-send-order"><strong>Ulice: </strong></label> <br>
       <input type="text" id="street" v-model="deliveryInfo.street" required> <br>
       <label for="city" class="label-send-order"><strong>Město: </strong></label> <br>
@@ -43,5 +43,10 @@ export default {
 </script>
 
 <style>
+.send-order-delivery-title {
+  font-size: 35px;
+  color: #006aff;
+  margin-left: -25px;
+}
 
 </style>

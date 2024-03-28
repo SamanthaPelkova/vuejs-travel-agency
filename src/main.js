@@ -12,6 +12,7 @@ import FreeTicketsToParis from "@/components/HomePage/FreeTickets/FreeTicketsTo/
 import ShoppingBasket from "@/components/ShoppingBasket/ShoppingBasket.vue"
 import VueNumberFormat from 'vue-number-format'
 import { createPinia } from "pinia"
+import CheckoutOrder from "@/components/ShoppingBasket/CheckoutOrder.vue";
 
 const router = createRouter({
     history: createWebHistory(),
@@ -52,6 +53,10 @@ const router = createRouter({
         {
             path: '/shoppingBasket',
             component: ShoppingBasket
+        },
+        {
+            path: '/checkout',
+            component: CheckoutOrder
         }
     ]
 })

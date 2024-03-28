@@ -11,7 +11,7 @@
           <button @click="decreaseQuantity" class="button-decrease-increase minus">-</button>
           <input v-model="quantity" min="1" class="product-input-quantity">
           <button @click="increaseQuantity" class="button-decrease-increase plus">+</button>
-          <button @click="$emit('add-to-basket', quantity)" class="add-to-basket">{{ addToBasketTitle }}</button>
+          <button @click="addToCart(product)" class="add-to-basket">{{ addToBasketTitle }}</button>
         </div>
       </div>
     </div>
@@ -22,6 +22,7 @@
 import { ref } from "vue";
 import { useScroll } from "@/script";
 import data from "@/data";
+import { useCartStore } from "@/orderModule";
 
 export default {
   props: {
@@ -35,6 +36,11 @@ export default {
     const products = ref(data)
     const { scrollTo } = useScroll()
     const quantity = ref(1)
+    const cartStore = useCartStore()
+
+    const addToCart = (product) => {
+      cartStore.addToCart(product)
+    }
 
     const decreaseQuantity = () => {
       if (quantity.value > 1) {
@@ -59,7 +65,8 @@ export default {
       increaseQuantity,
       travelProductsTitle,
       addToBasketTitle,
-      travelProductsSubtitle
+      travelProductsSubtitle,
+      addToCart
     }
   }
 }

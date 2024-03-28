@@ -1,40 +1,39 @@
 <template>
   <div>
-    <div v-if="filteredItems.length === 0" class="basketIsEmpty">
+    <div v-if="cartItems.length === 0" class="basketIsEmpty">
       <h2>Košík je prázdný</h2>
     </div>
-      <ul>
-        <li v-for="(ticket) in filteredItems" :key="ticket.id">
-          <img :src="ticket.image" alt=""/>
-          {{ ticket.name }} - {{ ticket.quantity * ticket.price }} Kč
-          <button class="removeFromBasket" @click="$emit('remove-item', ticket.id)">Odstranit</button>
-        </li>
-      </ul>
-    <hr>
-    <div v-if="totalPrice > 0">
+    <ul class="basket-products" v-if="cartItems.length">
+      <li v-for="(ticket) in cartItems" :key="ticket.id" class="basket-product">
+        <h3>{{ ticket.title }}</h3>
+        <p>{{ ticket.description }}</p>
+      </li>
+    </ul>
+    <div v-if="totalPrice > 0" class="basket-total-price">
       <h2 class="totalPrice">Celková cena: </h2>
       <h1 class="totalPriceSum">{{ vueNumberFormat(totalPrice) }}</h1>
     </div>
-    <SendOrderForm :price="totalPrice"/>
   </div>
+  <button class="checkout-page-btn" ><router-link to="/checkout">Pokračovat</router-link></button>
 </template>
 
 <script>
-import { computed } from "vue"
-import SendOrderForm from "@/components/ShoppingBasket/BasketProduct/SendOrderForm/SendOrderForm.vue";
+import { useCartStore } from "@/orderModule"
+import {computed} from "vue";
 
 export default {
-  components: { SendOrderForm },
   props: {
     filteredItems: {
       type: Array,
       required: true
     }
   },
-  setup(props) {
+  setup() {
+    const cartStore = useCartStore()
+
     const totalPrice = computed(() => {
       let subtotalPrice = 1990
-      props.filteredItems.forEach((ticket) => {
+      cartStore.cartItems.forEach((ticket) => {
         subtotalPrice += ticket.price
       })
       return subtotalPrice
@@ -42,6 +41,7 @@ export default {
 
 
     return {
+      cartItems: cartStore.cartItems,
       totalPrice
     }
   }
@@ -54,7 +54,36 @@ export default {
 
 
 <style>
+.basket-products {
+  background-color: #d5d5d5;
+  padding: 10px;
+}
 
+.basket-total-price {
+  background-color: white;
+  text-align: center;
+  margin-top: 150px;
+}
+
+.basket-product {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: rgba(245, 245, 245, 0.63);
+}
+
+.checkout-page-btn {
+  width: 30%;
+  padding: 20px;
+  border-radius: 60px;
+  border: none;
+  background-color: #ffffff;
+  font-size: 25px;
+  color: black;
+  margin-top: 50px;
+  margin-left: 580px;
+  text-decoration: none;
+
+}
 
 
 </style>

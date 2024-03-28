@@ -10,9 +10,9 @@
 
 <script>
 
-import CustomsFrance from "@/components/HomePage/HomePage-Country-Customs/CustomsFrance.vue";
-import CustomsSpain from "@/components/HomePage/HomePage-Country-Customs/CustomsSpain.vue";
-import CustomsAustria from "@/components/HomePage/HomePage-Country-Customs/CustomsAustria.vue";
+import CustomsFrance from "@/components/HomePage/HomePageCountryCustoms/CustomsFrance.vue";
+import CustomsSpain from "@/components/HomePage/HomePageCountryCustoms/CustomsSpain.vue";
+import CustomsAustria from "@/components/HomePage/HomePageCountryCustoms/CustomsAustria.vue";
 
 export default {
   components: { CustomsAustria, CustomsSpain, CustomsFrance },
