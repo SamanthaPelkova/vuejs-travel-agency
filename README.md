@@ -1,16 +1,4 @@
 <h1>Travel Agency</h1>
-
-
-<a name="readme-top"></a>
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
